@@ -13,8 +13,8 @@ body{
 .col{
     /** N E S W **/
     margin: 1% 1% 1% 1%;
-    height:400px !important;
-    width: 400px !important;
+    height:300px !important;
+    width: 300px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,4 +76,49 @@ body{
     right: 40%;
     top: 40%;
     background: linear-gradient(90deg, rgb(4, 130, 8) 0%, rgb(0, 255, 30) 100%, rgb(247, 244, 244) 10%);
+}
+
+/* heart */
+.heart{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.ears{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+.circle{
+    width: 25%;
+    height: 50%;
+    background: rgb(223, 173, 11);
+    border-radius: 100%;
+    background: linear-gradient(90deg, rgb(232, 125, 86) 0%, rgb(242, 255, 0) 70%);
+
+}
+
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-top: 70px solid rgb(197, 37, 37);
+    position: relative;
+    bottom: 12%;
+}
+.hide-bottom-ears{
+    width: 50%;
+    height: 5%;
+    background: rgb(243, 243, 243);
+    position: relative;
+    bottom: 12%;
+    
 }
