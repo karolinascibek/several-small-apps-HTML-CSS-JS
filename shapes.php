@@ -22,46 +22,34 @@
 
             <div class="col">
                 <div class="shape">
-                    <div class="packman">
-                        <div class="packman-mouth">
-                            <div class="food"></div>
-                        </div>
-                        <div class="packman-eye">
-
-                        </div>
-                    </div>
+                    <?php
+                    require_once "./icons/packman.php";
+                    ?>
                 </div>
             </div>
 
             <!-- heart -->
             <div class="col">
                 <div class="shape">
-                    <div class="heart">
-                        <div class="ears">
-                            <div class="circle"></div>
-                            <div class="circle"></div>
-                        </div>
-                        <div class="hide-bottom-ears"></div>
-                        <div class="triangle">
-
-                        </div>
-                    </div>
+                    <?php
+                    require "./icons/heart.php";
+                    ?>
                 </div>
             </div>
 
             <div class="col">
                 <div class="shape">
-                    <div class="circle">
-
-                    </div>
+                    <?php
+                    require_once "./icons/cup.php";
+                    ?>
                 </div>
             </div>
 
             <div class="col">
                 <div class="shape">
-                    <div class="circle">
-
-                    </div>
+                    <?php
+                    require_once "./icons/cat.php";
+                    ?>
                 </div>
             </div>
 
