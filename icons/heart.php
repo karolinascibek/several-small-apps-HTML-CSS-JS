@@ -15,8 +15,9 @@
         var triangle = document.querySelector("#shape-triangle");
         var cir = document.querySelector("#ear-heart");
         var width = cir.offsetWidth;
+        var hight = cir.offsetHeight;
 
-        triangle.style.borderTop = "70px solid rgb(197, 37, 37)";
+        triangle.style.borderTop = `${hight}px solid rgb(197, 37, 37)`;
         triangle.style.borderLeft = `${width}px solid transparent`;
         triangle.style.borderRight = `${width}px solid transparent`;
     }

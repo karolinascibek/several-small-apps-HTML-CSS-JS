@@ -1,11 +1,23 @@
-body{
+body, html{
     background: #e3e7e6;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 .container{
-    
+    min-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .row{
-
+    width: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -13,11 +25,18 @@ body{
 .col{
     /** N E S W **/
     margin: 1% 1% 1% 1%;
-    height:300px !important;
-    width: 300px !important;
+    height: 200px ;
+    width:200px ;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 425px){
+    .col{
+        width: 50%;
+        height: 50vw;
+    }
 }
 .shape{
     border-radius: 50%;
@@ -31,13 +50,7 @@ body{
 }
 
 
-@media screen and (min-width: 650px) {
-    .row{
-
-    }
-}
-
-/** pacman **/
+/* * pacman * */
 
 .packman{
     border-radius: 50%;
@@ -118,14 +131,13 @@ body{
     position: relative;
     bottom: 12%;
     
-}
+} 
 
 /* cup */
 
 .cup{
     width: 50%;
     height: 50%;
-    /* background: rgb(141, 66, 66);  */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,7 +194,7 @@ body{
     background:rgb(51, 97, 128);
     border-radius: 100%;
 
-}
+} 
 
 /* cat */
 
@@ -211,7 +223,7 @@ body{
     width: 40%;
     height: 70%;
     border: 1px solid black;
-    background: white;
+    background: rgb(255, 253, 253);
     border-radius: 50%;
     display: flex;
     flex-direction: column;
