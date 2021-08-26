@@ -1,4 +1,4 @@
-
+ 
 .navigation{
     display: flex;
     flex-direction: row;
@@ -6,146 +6,121 @@
     justify-content: center;
     background: rgba(211, 179, 179,0.4);
     position: fixed;
+    text-transform: capitalize;
 }
-.navigation > a {
+.navigation > .nav-link {
     padding: 2rem;
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
-.navigation > a:hover {
+.navigation > .nav-link:hover {
     background: rgb(216, 146, 146);
 }
 
-.navigation > .box-wrap {
+.btn-wrap-menu{
     display: none;
-    position: relative;
+    background: none;   
 }
-/* .navigation > .box-wrap > .box-container{
-    display:none;
-} */
-.navigation > .box-wrap > .btn {
-    /* background: rgb(211, 179, 179); */
-    padding: 1.45rem;
-    border: 0;
-    border-left:1px solid rgb(105, 105, 105);
-    background: none;
+.box-wrap > ul > .li-btn {
+    text-align: end;
+    margin-bottom: 10px;
+    margin-right: 10%;
 }
-.navigation > .box-wrap >  .menu-wrap {
-    display: none;
+.btn-menu-wrap-close{
+    background: pink;
+    z-index: 1;
+    display: flex;
+}
+.btn-wrap-menu:focus + .box-wrap , 
+.box-wrap:hover  {
+    display: flex;
+    transform: translateX(0);
+    box-shadow: none;
+
+}
+
+
+.box-wrap {
+    height: 100vh;
     margin: 0;
     padding: 0;
-    background: rgb(247, 248, 246);
+    background: rgb(255, 255, 255);
     width: 50vw;
-}
-.navigation > .box-wrap >  .menu-wrap > a {
-    padding: 1.5rem;
-    text-decoration: none;
-    color: rgb(90, 88, 88) ;
-    padding-left:10% ;
-    
-    border-bottom: 1px solid rgb(221, 217, 217) ;
-}
-.navigation > .box-wrap:hover  >  .menu-wrap {
-    display: flex;
+    position: absolute;
+    right: 0;
+    top:0;
+    box-shadow: -0.1em 0 10em #6d6767;
     flex-direction: column;
     position: absolute; 
     right: 0;
-    
+    transform: translateX(100%);
+    transition: 0.3s transform ease-in-out;
 }
-.navigation > .box-wrap > .btn:focus + .menu-wrap  {
-    display: flex;
-    flex-direction: column;
+.box-wrap {
+    /* height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: rgb(255, 255, 255);
+    width: 50vw;
     position: absolute;
     right: 0;
+    top:0;
+    box-shadow: -0.1em 0 10em #6d6767;
+    flex-direction: column;
+    position: absolute; 
+    right: 0;
+    transform: translateX(100%);
+    transition: 0.3s transform ease-in-out; */
 }
-.navigation > .box-wrap > .menu-wrap > a:hover {
-    background: rgb(109, 54, 54);
+
+.box-wrap > ul{
+    list-style: none;
+    /* margin-top: 50px; */
+    padding-inline-start: 0;
+}
+.box-wrap > ul >li>a{
+    display: block;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: rgb(10, 0, 0) ;
+    padding-left:10% ;  
+}
+
+
+.navigation > .box-wrap > ul> li > a:hover {
+    background: rgb(243, 243, 243);
     font-size: 1.25rem;
-    color:white;
+    color:rgb(14, 13, 13);
+    box-shadow: -5px 0px red;
+
 }
+
 
 
 
 @media screen and (max-width: 1050px){
-    .navigation > a {
+     .navigation > .nav-link {
         display: none;
+    }
+    .navigation > .btn-wrap-menu{
+        display: block;
     }
     .navigation{
         justify-content: flex-end;
-    }
-    .navigation > .box-wrap{
-        display: block;
     } 
-    .navigation > .box-wrap-2{
-        display: block;
-        /* top: 0;
-        right: 0; */
-    }
-}
 
-@media screen and (max-width: 650px){
-    .navigation > .box-wrap:hover > .menu-wrap{
+} 
+
+ @media screen and (max-width: 650px){
+    .navigation > .box-wrap{
         width: 100vw;
         text-align: center;
     }
-    .navigation > .box-wrap > .btn:focus + .menu-wrap  {
-        width: 100vw;
-        text-align: center;
-    }
-}
+} 
 
 .btn > i{
     font-size: 2rem;
     padding: 2px;
 }
 
-/* box-wrap-2 */
-
-/* .box-wrap-2{
-    background: blue;
-    display: none;
-    position: absolute;
-    right: 11.3%;
-    height: 100vh;
-}
-
-.box-wrap-2 > .box-container-2{
-    background: brown;
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    justify-self: center;
-
-}
-.box-container-btn {
-    display: flex;
-    flex-direction: column;
-}
-.box-container-2 > button{
-    width: 30%;
-    height: 100%;
-}
-.box-container-2 > .box-container-title{
-    width: 100%;
-    padding: 3%;
-    text-align: center;
-}
-.box-wrap-2 > .box-container-2 > .btn > i{
-    font-size: 2rem;
-    padding: 2px;
-}
-
-.box-wrap-2 > .box-container-2 > .menu-wrap-2{
-    background: cadetblue;
-    display: flex;
-    flex-direction: column;
-}
-
-.box-wrap-2 > .box-container-2 > .menu-wrap-2 > a{
-    background: cadetblue;
-    padding: 3%;
-    margin-left: 2%;
-    text-decoration: none;
-    margin-left: 10%;
-} */

@@ -1,5 +1,6 @@
-<?php
+<?php 
 require_once("./header/header.php");
+require_once("./header/nav.php");
 ?>
 
 <div class="forms">
@@ -23,20 +24,13 @@ require_once("./header/header.php");
     <!-- form 2 -->
     <div class="form-1-container">
         <h3 class="form-2-name" >Formularz 2</h3>
-        <div class="form-2">
-            <input type="text">
-            <input type="text">
-            <input type="checkbox" name="" id="">
-            <input type="checkbox" name="" id="">
-            <input type="radio" name="radio-2" id="">
-            <input type="radio" name="radio-2" id="">
-            <input type="color" id="inp-color" value="#ff0000">
-            <input type="date" id="inp-date" value="">
+        <?php
+            require_once("./forms/calendar.php");
+        ?>
 
-        </div>
     </div>
 </div>
-<script>
+<!-- <script>
     let ipc = document.getElementById("inp-date");
     let body = document.querySelector("body");
     function changeColor(event){
@@ -53,7 +47,7 @@ require_once("./header/header.php");
     //ipc.value = date;
     ipc.value = date;
     console.log(ipc.value);
-</script>
+</script> -->
 
 <?php
 require_once("./footer/footer.php");

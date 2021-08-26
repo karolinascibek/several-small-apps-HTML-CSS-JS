@@ -1,5 +1,6 @@
 <?php 
 require_once("./header/header.php");
+require_once("./header/nav.php");
 ?>
 
 
@@ -24,7 +25,5 @@ require_once("./footer/footer.php");
     #start-page > img{
         max-width: 100%;
     }
-    .navigation{
-        
-    }
+
 </style>
