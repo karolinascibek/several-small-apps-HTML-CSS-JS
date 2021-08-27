@@ -56,6 +56,7 @@
     right: 0;
     transform: translateX(100%);
     transition: 0.3s transform ease-in-out;
+    display: none;
 }
 .box-wrap {
     /* height: 100vh;

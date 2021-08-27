@@ -21,7 +21,7 @@ function setHeight(objectName, value) {
     objectName.style.height = `${value}px`;
 }
 
-// funkcja ustawia wysokość dla obiektu
+// funkcja ustawia szerokość dla obiektu
 function setWight(objectName, value) {
     objectName.style.width = `${value}px`;
 }
@@ -32,30 +32,6 @@ function setObjectsHeight(objects, value) {
     objects.forEach(ele => {
         setHeight(ele, value);
     })
-}
-
-
-
-function setSizeNavCalendar() {
-    let days = getObjects(".day");
-    let width = getWidth(days[0]);
-    setObjectsHeight(days, width);
-
-    let weekdays = getObjects(".cal-card-weekdays > div");
-    setObjectsHeight(weekdays, width);
-
-    let nav_cal = getObject(".cal-nav");
-    setWight(nav_cal, width * 7 - 1);
-
-}
-
-// let currentDate = new Date(Date.now());
-// let c = `${currentDate.getFullYear()}-${currentDate.getMonth()}-${currentDate.getDay()}: ${currentDate.getDate()}`;
-// console.log(c)
-
-function setCurentCalendarCard() {
-    let currentDate = new Date(Date.now());
-
 }
 
 function setNav(date, months) {
@@ -110,9 +86,11 @@ function setDays(date) {
         let actDate = new Date(Date.now());
 
         myDiv.style.background = '#440f53';
+        myDiv.classList.add('current_month');
         if( date.getMonth() == actDate.getMonth() && date.getFullYear() == actDate.getFullYear() 
             &&  date.getDate() == i ){
             myDiv.style.background = '#ffc20a';
+            myDiv.classList.add('current_day');
         }
         days.appendChild(myDiv);
     }
@@ -128,6 +106,7 @@ function setDays(date) {
     console.log(lastDayMonth.getDay())
 
 }
+
 
 function cleanCalendar(){
     let days = getObjects(".cal-card-days > .day");

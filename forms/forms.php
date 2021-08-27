@@ -1,6 +1,6 @@
 <?php 
-require_once("./header/header.php");
-require_once("./header/nav.php");
+require_once("../header/header.php");
+require_once("../nav/nav.php");
 ?>
 
 <div class="forms">
@@ -21,14 +21,7 @@ require_once("./header/nav.php");
 
         </div>
     </div>
-    <!-- form 2 -->
-    <div class="form-1-container">
-        <h3 class="form-2-name" >Formularz 2</h3>
-        <?php
-            require_once("./forms/calendar.php");
-        ?>
-
-    </div>
+    
 </div>
 <!-- <script>
     let ipc = document.getElementById("inp-date");
@@ -50,5 +43,5 @@ require_once("./header/nav.php");
 </script> -->
 
 <?php
-require_once("./footer/footer.php");
+require_once("../footer/footer.php");
 ?>
