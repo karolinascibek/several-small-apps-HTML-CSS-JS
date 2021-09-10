@@ -19,13 +19,118 @@
         <div class="cal-card-days"> </div>
     </div>
 </div>
+
+<div id="form">
+    <h4 onclick="closeFormAddEvent()"><span>x</span></h4>   
+    <div>
+        <h3 id="date-event">2-wrzesnia 2021</h3>
+        <div id="form-add-event">
+            <form action="">
+                <input type="text" class="input-hour form-input" placeholder="hh:mm">
+                <input type="text" class="input-event form-input" placeholder="wydarzenie">
+                <button onclick="addNewEvent()" type="button" class="form-input">Dodaj</button>
+            </form>
+        </div>
+        <ul id="list-events">
+            <li>event 1</li>
+            <li>event 1</li>
+            <li>event 1</li>
+            <li>event 1</li>
+        </ul>
+    </div>
+</div>
+
 </div>
 
 
+
 <style>
-    .container {
-        display: flex;
+
+    #form{
+        /* position: absolute;
+        top: 0%; */
+        background: rgba(0, 0, 0, 0.6);
+        width: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 2% 0;
+        display:flex;
+        transition: width 3s;
     }
+    #form >h4{
+        width: 80%;
+        align-self: center;
+        text-align: end;
+    }
+    /* #form >button:focus + #form{
+        display: none;
+    } */
+    #form>h4>span{
+        border-radius: 50%;
+        background: white;
+        padding: 0.7em 1em;
+    }
+
+    #form > div{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #form > div>#form-add-event{
+        width:90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right:2px;
+        align-items: center;
+    }
+    #form > div>#form-add-event >form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    #form > div>#form-add-event >form > input:focus{
+        outline:none;
+        border-bottom: 2px solid red;
+    }
+    #form-add-event >form >.form-input{
+        width: 100%;
+        padding: 0.5rem;
+        border:none;
+    }
+    #form-add-event >form >.input-hour{
+        /* width: 30%; */
+    }
+    #form-add-event >form >.input-event{
+        /* width: 60%; */
+    }
+    #form-add-event >form >button{
+        
+
+    }
+    #form > div>#list-events{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+    #form > div>#list-events > li{
+        background: white;
+        margin-bottom: 3px;
+        border-radius: 0.2rem;
+        padding: 1rem;
+    }
+
+    .container{
+        position: relative;
+    }
+
     .calendar {
         display: flex;
         flex-direction: column;
@@ -47,7 +152,7 @@
         flex-direction: column;
         align-items: center;
         /* background: white; */
-        border:0.5px solid white;
+        /* border:0.5px solid white; */
     }
 
     .calendar>.cal-nav> .buttons > button {
@@ -104,6 +209,12 @@
         background: #bdbdbd7a;
         /* height: 10vw; */
         color: white;
+
+    }
+    .cal-card>.cal-card-days>.day:hover,
+    .cal-card>.cal-card-days>.day.current-month:hover,
+    .cal-card>.cal-card-days>.day.current-month.current-day:hover{
+        background: #555555;
     }
 
     .buttons {
@@ -128,11 +239,11 @@
         
     }
 
-    .current_month{
-        background:'#440f53';
+    .cal-card>.cal-card-days>.day.current-month{
+        background:#440f53;
     }
-    .current_day{
-        background:'#ffc20a';
+    .cal-card>.cal-card-days>.day.current-month.current-day{
+        background:#ffc20a;
     }
     #current-card{
         padding: 20px 0 0 0;
@@ -147,4 +258,6 @@
 </style>
 
 <script src="./calendar/js/calendar.js" defer></script>
+<script src="./calendar/js/list_events.js" defer></script>
+<script src="./calendar/js/add_event.js" defer></script>
 

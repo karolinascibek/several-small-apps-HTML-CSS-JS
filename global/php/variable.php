@@ -7,5 +7,4 @@
         "projekty" => "./projects.php",
         // "tab 5" => "./index.php",
     ];
-
 ?>

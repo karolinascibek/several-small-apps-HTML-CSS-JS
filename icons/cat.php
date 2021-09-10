@@ -21,7 +21,7 @@
 </div>
 
 
-<script>
+<script  defer>
     function setEarSize() {
         var ears = document.querySelectorAll(".ear-cat");
         var paw = document.querySelector(".paw");

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Flex box </h1>
+
+   <main>
+       <section class="sidebar"></section>
+       <section class="maincontent"></section>
+       <section class="sidebar"></section>
+   </main>
+
+</body>
+</html>
+
+<style>
+main{
+    width: 80%;
+    margin: 0 auto;
+    border:5px solid black;
+    height: 500px;
+    display: flex;
+}
+main .sidebar{
+    background-color: chartreuse;
+    flex: 1 2 300px;
+    border: 2px solid blue;
+}
+main .maincontent{
+    background-color: cadetblue;
+    flex:2 1 800px;
+}
+</style>
+
+<script src="."></script>

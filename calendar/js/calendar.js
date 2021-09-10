@@ -39,7 +39,6 @@ function setNav(date, months) {
     let year = date.getFullYear();
 
     let nav = getObject("#current-card");
-    console.log(nav.textContent);
     nav.textContent = `${months[month]} ${year}`;
 
 }
@@ -55,9 +54,20 @@ function setWeekdays(weekd) {
 
 function createNewElementDay(date,numberDay){
     let myDiv = document.createElement("div");
-    myDiv.classList.add("day");
-    myDiv.textContent = `${new Date(date.getFullYear(), date.getMonth(), numberDay).getDate()}`;
+    let day = new Date(date.getFullYear(), date.getMonth(), numberDay);
+
+    myDiv.classList.toggle("day");
+    myDiv.textContent = `${day.getDate()}`;
+    myDiv.id = setIdForDay(day.getFullYear(), day.getMonth()+1, day.getDate(), "-");
+
+    myDiv.addEventListener('click', function(){
+        clickedOnDay(myDiv.id)
+    } );
     return myDiv;
+}
+
+function setIdForDay(year, month, day, sep){
+    return year+sep+month+sep+day;
 }
 
 
@@ -72,7 +82,7 @@ function setDays(date) {
         startDate = 7;
     }
 
-    let days_number = lastDayMonth.getDate();
+    let daysNumber = lastDayMonth.getDate();
 
     // dni z poprzedniego miesiąca
     for (let i = (startDate - 2); i >= 0; i--) {
@@ -81,16 +91,15 @@ function setDays(date) {
     }
 
     // dni z aktualalnego miesiąca
-    for (let i = 1; i <= days_number; i++) {
+    for (let i = 1; i <= daysNumber; i++) {
         let myDiv = createNewElementDay(date,i);
         let actDate = new Date(Date.now());
 
-        myDiv.style.background = '#440f53';
-        myDiv.classList.add('current_month');
-        if( date.getMonth() == actDate.getMonth() && date.getFullYear() == actDate.getFullYear() 
-            &&  date.getDate() == i ){
-            myDiv.style.background = '#ffc20a';
-            myDiv.classList.add('current_day');
+        myDiv.classList.toggle("current-month");
+
+        if( date.getMonth() === actDate.getMonth() && date.getFullYear() === actDate.getFullYear() 
+            &&  actDate.getDate() === i ){
+            myDiv.classList.toggle("current-day");
         }
         days.appendChild(myDiv);
     }
@@ -99,11 +108,10 @@ function setDays(date) {
     // howNextDeys = (howNextDeys == 0) ? 0 : 7 - howNextDeys;
 
     // dni z przyszłego miesiąca
-    for (let i = 0 ; i < 7-howNextDeys ; i++) {
-        let myDiv = createNewElementDay(date,i+1);
+    for (let i = 1 ; i <= 7-howNextDeys ; i++) {
+        let myDiv = createNewElementDay(date, lastDayMonth.getDate() + i);
         days.appendChild(myDiv);
     }
-    console.log(lastDayMonth.getDay())
 
 }
 
@@ -119,12 +127,12 @@ function cleanCalendar(){
 
 function setNextMonth(currentDate){
     cleanCalendar();
-    currentDate.setMonth(currentDate.getMonth() + 1)
+    currentDate.setMonth(currentDate.getMonth()+1 );
     calendar(currentDate);
 }
 function setPrevMonth(currentDate){
     cleanCalendar();
-    currentDate.setMonth(currentDate.getMonth() - 1)
+    currentDate.setMonth(currentDate.getMonth()-1);
     calendar(currentDate);
 }
 
@@ -133,18 +141,19 @@ function calendar( currentDate){
     let weekdays = ["Pon", "Wt", "Śr", "Cz", "Pt", "So", "Nd"];
     let months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 
+    console.log(currentDate.getMonth());
     setNav(currentDate, months);
     setDays(currentDate);
     setWeekdays(weekdays);
-
-    setSizeNavCalendar();
 }
 
 
+
+///////////////////////////////////////////////////////
+
 //stałe
 let currentDate = new Date(Date.now());
+currentDate.setDate(1);
 
 
 calendar(currentDate);
-
-window.addEventListener("resize", setSizeNavCalendar);

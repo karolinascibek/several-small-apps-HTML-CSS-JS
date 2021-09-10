@@ -1,4 +1,7 @@
 <?php 
+
+require_once("./global/php/const.php");
+
 require_once("./header/header.php");
 require_once("./nav/nav.php");
 ?>
