@@ -26,8 +26,8 @@
         <h3 id="date-event">2-wrzesnia 2021</h3>
         <div id="form-add-event">
             <form action="">
-                <input type="text" class="input-hour form-input" placeholder="hh:mm">
-                <input type="text" class="input-event form-input" placeholder="wydarzenie">
+                <input type="text" id="input-hour" class=" form-input" placeholder="hh:mm">
+                <input type="text" id="input-event" class=" form-input" placeholder="wydarzenie">
                 <button onclick="addNewEvent()" type="button" class="form-input">Dodaj</button>
             </form>
         </div>
@@ -103,10 +103,10 @@
         padding: 0.5rem;
         border:none;
     }
-    #form-add-event >form >.input-hour{
+    #form-add-event >form >#input-hour{
         /* width: 30%; */
     }
-    #form-add-event >form >.input-event{
+    #form-add-event >form >#input-event{
         /* width: 60%; */
     }
     #form-add-event >form >button{

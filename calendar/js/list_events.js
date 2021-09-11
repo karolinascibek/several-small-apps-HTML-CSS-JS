@@ -12,14 +12,16 @@ function createSingleEvent(ev){
         newEvent.innerText = `${ev.hour} ${ev.event}`;
         return newEvent;
 }
-function createEvents(events, list){
+function createEvents(events){
+    let list = takeListEvent();
     events.forEach(ev=>{
         let newEvent = createSingleEvent(ev);
         list.appendChild(newEvent);
     })
 }
 
-function clearListEvents(list){
+function clearListEvents(){
+    let list = takeListEvent();
     while (list.firstChild) {
         list.firstChild.remove()
     }
@@ -37,26 +39,20 @@ function setVisibleBox(){
     form.style.display = 'flex';
 }
 
-function ajaxGetListEvents(list){
-    // let events = [
-    //     {hour:"12:30", event:"Hellow"},
-    //     {hour:"12:30", event:"Hellow"},
-    //     {hour:"12:30", event:"Hellow"},
-    //     {hour:"14:30", event:"Hellow"},
-    //     {hour:"17:300", event:"Hellow gasa ds d"},
-    //     {hour:"12:30", event:"Hellow"},
-    // ]
-    fetch(baseURL+'calendar/php/list_events.php', {
-        method: 'GET', 
-        // headers: {
-        //     'Content-Type': 'application/json',
-        // },
-        // body: JSON.stringify(data),
+function takeListEvent(){
+    return getObject("#list-events");
+}
+
+function ajaxGetListEvents(){
+    let list = takeListEvent();
+    fetch(baseURL+'calendar/php/list_events.php',
+        {
+            method: 'GET', 
         })
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
-            createEvents(data, list);
+            createEvents(data);
         })
         .catch((error) => {
         console.error('Error:', error);
@@ -72,10 +68,10 @@ function clickedOnDay(dayId){
     setHeadline(dayId);
 
     let list = getObject("#list-events");
-    clearListEvents(list);
+    clearListEvents();
 
     //tworzenie nowych elementów
     // api do pobierania i zapisywania dancyh
-    ajaxGetListEvents(list);
+    ajaxGetListEvents();
    
 }
