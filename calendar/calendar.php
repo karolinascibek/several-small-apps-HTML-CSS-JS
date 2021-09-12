@@ -24,15 +24,25 @@
     <h4 onclick="closeFormAddEvent()"><span>x</span></h4>   
     <div>
         <h3 id="date-event">2-wrzesnia 2021</h3>
+        <button id="btn-new-event" onclick="openAddEventForm()">+ new</button>
         <div id="form-add-event">
             <form action="">
                 <input type="text" id="input-hour" class=" form-input" placeholder="hh:mm">
                 <input type="text" id="input-event" class=" form-input" placeholder="wydarzenie">
-                <button onclick="addNewEvent()" type="button" class="form-input">Dodaj</button>
+                <div>
+                    <button onclick="addNewEvent()" type="button" class="form-input">Dodaj</button>
+                    <button type="button" onclick="cancelAddNewEvent()" >Anuluj</button>
+                </div>
             </form>
         </div>
         <ul id="list-events">
-            <li>event 1</li>
+            <li>event 1 
+                <div class="event-tools">
+                    <div>X</div>
+                    <div>E</div>
+                    <div>-</div>
+                </div>
+            </li>
             <li>event 1</li>
             <li>event 1</li>
             <li>event 1</li>
@@ -80,9 +90,10 @@
         align-items: center;
 
     }
+
     #form > div>#form-add-event{
         width:90%;
-        display: flex;
+        display: none;
         flex-direction: column;
         justify-content: center;
         padding-right:2px;
@@ -121,14 +132,61 @@
         padding: 0;
     }
     #form > div>#list-events > li{
+        position: relative;
+        padding: 1rem;
+    }
+    /* #form > div>#list-events > li::before{
+        content: "x";
+        display: inline-block;
+        position:absolute;
+        border: 1px solid red;
+        padding: 0.5rem;
+        right:0;
+        top:0;
+        margin-left: 1rem;
+    } */
+    #form > div>#list-events > li,
+    #form > div>#list-events > li > .event-tools{
         background: white;
         margin-bottom: 3px;
         border-radius: 0.2rem;
-        padding: 1rem;
+        /* padding: 1rem; */
+    }
+
+    #form > div>#list-events > li > .event-tools{
+        display: none;
+    }
+    #form > div>#list-events > li:hover {
+        visibility: 0.5;
+        cursor: pointer;
+    }
+    #form > div>#list-events > li:hover > .event-tools,
+    #form > div>#list-events > li:focus > .event-tools {
+        display: flex;
+        background: #6e99bf82;;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding-left: 0;
+        padding-right:0; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }  
+    #form > div>#list-events > li > .event-tools> div{
+        background: white;
+        border: 1px solid black;
+        padding: 0.5rem;
+        border-radius: 0.2rem;
+        width: 1rem;
+        margin: 0 2px;
     }
 
     .container{
-        position: relative;
+        /* position: relative; */
     }
 
     .calendar {
@@ -257,7 +315,10 @@
 
 </style>
 
+<script src="./calendar/js/general.js" defer></script>
 <script src="./calendar/js/calendar.js" defer></script>
+<script src="./calendar/js/api.js" defer></script>
 <script src="./calendar/js/list_events.js" defer></script>
 <script src="./calendar/js/add_event.js" defer></script>
+<script src="./calendar/js/event_tools.js" defer></script>
 

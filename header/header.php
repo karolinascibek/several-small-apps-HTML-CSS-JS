@@ -18,4 +18,9 @@
 <body>
 
 <script src="./global/js/ajax.js" defer></script>
+<?php 
+
+require_once "./global/php/const.php";
+
+?>
 

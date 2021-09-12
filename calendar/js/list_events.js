@@ -10,6 +10,11 @@ function closeFormAddEvent(){
 function createSingleEvent(ev){
         let newEvent =  document.createElement("li");
         newEvent.innerText = `${ev.hour} ${ev.event}`;
+        let boxTools = createEventTools();
+        newEvent.appendChild(boxTools);
+        // tool.addEventListener('click', function(){
+        //     setVisibleBox()
+        // } );
         return newEvent;
 }
 function createEvents(events){
@@ -33,36 +38,15 @@ function setHeadline(dayId){
     dateEvent.innerText = date;
 }
 
-function setVisibleBox(){
-    let cal = getObject(".calendar");
-    let form = getObject("#form");
-    form.style.display = 'flex';
-}
-
 function takeListEvent(){
     return getObject("#list-events");
 }
 
-function ajaxGetListEvents(){
-    let list = takeListEvent();
-    fetch(baseURL+'calendar/php/list_events.php',
-        {
-            method: 'GET', 
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            createEvents(data);
-        })
-        .catch((error) => {
-        console.error('Error:', error);
-     });
-}
 
 function clickedOnDay(dayId){
 
     console.log("Klik")
-    setVisibleBox();
+    setVisibleBox("#form", true);
 
     // ustawienie daty
     setHeadline(dayId);
@@ -72,6 +56,6 @@ function clickedOnDay(dayId){
 
     //tworzenie nowych elementów
     // api do pobierania i zapisywania dancyh
-    ajaxGetListEvents();
+    ajaxGetListEvents(baseURL+'calendar/php/list_events.php');
    
 }

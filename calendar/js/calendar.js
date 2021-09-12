@@ -1,39 +1,5 @@
 
-// funkcja zwracajaca jeden obiekt po nazwie id/class
-function getObject(classname) {
-    let elem = document.querySelector(classname);
-    return elem;
-}
-
-// funkcja zwracajaca wiele obiektów po nazwie id/class
-function getObjects(classname) {
-    let elem = document.querySelectorAll(classname);
-    return elem;
-}
-
-// funkcja zwracajaca szerokosć obiektu
-function getWidth(object) {
-    return object.offsetWidth;
-}
-
-// funkcja ustawia wysokość dla obiektu
-function setHeight(objectName, value) {
-    objectName.style.height = `${value}px`;
-}
-
-// funkcja ustawia szerokość dla obiektu
-function setWight(objectName, value) {
-    objectName.style.width = `${value}px`;
-}
-
-
-// funkcja ustawijąca wysokośc dla wielu obiektów
-function setObjectsHeight(objects, value) {
-    objects.forEach(ele => {
-        setHeight(ele, value);
-    })
-}
-
+// nagłowek kalendarza
 function setNav(date, months) {
     let month = parseInt(date.getMonth());
     let year = date.getFullYear();
@@ -43,6 +9,7 @@ function setNav(date, months) {
 
 }
 
+//dni tygodnia
 function setWeekdays(weekd) {
     let weekdays = getObject(".cal-card-weekdays");
     let content = "";
@@ -52,6 +19,7 @@ function setWeekdays(weekd) {
     weekdays.innerHTML = content;
 }
 
+//dzień z kalendarza - tworzenie elementu
 function createNewElementDay(date,numberDay){
     let myDiv = document.createElement("div");
     let day = new Date(date.getFullYear(), date.getMonth(), numberDay);
@@ -125,6 +93,7 @@ function cleanCalendar(){
     })
 }
 
+//nawigacja kalendarza - nastepny/poprzedni miesiąc
 function setNextMonth(currentDate){
     cleanCalendar();
     currentDate.setMonth(currentDate.getMonth()+1 );
@@ -146,14 +115,9 @@ function calendar( currentDate){
     setDays(currentDate);
     setWeekdays(weekdays);
 }
-
-
-
 ///////////////////////////////////////////////////////
 
 //stałe
 let currentDate = new Date(Date.now());
 currentDate.setDate(1);
-
-
 calendar(currentDate);

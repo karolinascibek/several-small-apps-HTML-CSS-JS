@@ -1,23 +1,6 @@
- function ajaxPostAddNewEvent(dataForm){
-     fetch(baseURL+"/calendar/php/add_event.php",{
-         method:'POST',
-         body:JSON.stringify(dataForm),
-         headers:new Headers()
-     })
-     .then(response => response.json())
-     .then(data => {
-         // aktualizowanie listy wydarzeń 
-        console.log('Success:', data);
-        clearListEvents();
-        createEvents(data.events);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-     });
 
-}
 
-function addNewEvent(){
+function getdataForm(){
     console.log("Nowe wydarzenie xD")
     let inputHour = getObject("#input-hour");
     let inputEvent = getObject("#input-event");
@@ -30,10 +13,31 @@ function addNewEvent(){
         event:inputEvent.value
     }
 
+    return newEvent;
+}
+
+function addNewEvent(){
+    const newEvent = getdataForm();
+
     // dodanie nowego wydarzenia
     // aktualizowanie listy wydarzeń 
     console.log(newEvent)
-    ajaxPostAddNewEvent(newEvent);
+    ajaxPostAddNewEvent(baseURL+"/calendar/php/add_event.php", newEvent);
+    closeAddEventForm();
+}
 
+function openAddEventForm(){
+    console.log("Add event form")
+    setVisibleBox("#form-add-event", true);
+    setVisibleBox("#btn-new-event", false);
+}
 
+function closeAddEventForm(){
+    console.log(" cancel Add event form")
+    setVisibleBox("#form-add-event", false);
+    setVisibleBox("#btn-new-event", true);
+}
+
+function cancelAddNewEvent(){
+    closeAddEventForm();
 }
