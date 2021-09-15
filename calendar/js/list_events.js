@@ -9,7 +9,7 @@ function closeFormAddEvent(){
 
 function createSingleEvent(ev){
         let newEvent =  document.createElement("li");
-        newEvent.innerText = `${ev.hour} ${ev.event}`;
+        newEvent.innerText = `${ev.time} ${ev.event}`;
         let boxTools = createEventTools();
         newEvent.appendChild(boxTools);
         // tool.addEventListener('click', function(){
@@ -17,12 +17,24 @@ function createSingleEvent(ev){
         // } );
         return newEvent;
 }
+
+function setInfo(message){
+    let info= document.createElement("li");
+    info.innerText = message;
+    return info;
+}
+
 function createEvents(events){
     let list = takeListEvent();
     events.forEach(ev=>{
         let newEvent = createSingleEvent(ev);
         list.appendChild(newEvent);
     })
+
+    if(events.length <= 0){
+        let li = setInfo("Twoja lista wydarzeń jest pusta.");
+        list.appendChild(li);
+    }
 }
 
 function clearListEvents(){
@@ -33,9 +45,9 @@ function clearListEvents(){
 }
 
 function setHeadline(dayId){
+    console.log(dayId)
     let dateEvent = getObject("#date-event");
-    let date = new Date(dayId).toLocaleDateString();
-    dateEvent.innerText = date;
+    dateEvent.innerText = dayId;
 }
 
 function takeListEvent(){
@@ -47,6 +59,8 @@ function clickedOnDay(dayId){
 
     console.log("Klik")
     setVisibleBox("#form", true);
+    closeAddEventForm();
+    setAddEventFormBox();
 
     // ustawienie daty
     setHeadline(dayId);
@@ -56,6 +70,7 @@ function clickedOnDay(dayId){
 
     //tworzenie nowych elementów
     // api do pobierania i zapisywania dancyh
-    ajaxGetListEvents(baseURL+'calendar/php/list_events.php');
+    console.log(new Date(dayId).toLocaleString())
+    ajaxGetListEvents(baseURL+'calendar/php/list_events.php', {date:dayId});
    
 }

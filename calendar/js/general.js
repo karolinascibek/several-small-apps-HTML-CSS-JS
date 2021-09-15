@@ -43,3 +43,16 @@ function setVisibleBox(elem, isVisible){
         el.style.display = 'none';
     }
 }
+
+function clearBox(elem){
+    let el = getObject(elem);
+    el.innerText="";
+    console.log("clear box ")
+}
+
+function setInputValue(elem){
+    let el = getObject(elem);
+    console.log("set value box ", el)
+    el.value="";
+}
+

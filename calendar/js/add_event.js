@@ -9,11 +9,17 @@ function getdataForm(){
 
     const newEvent={
         date:date,
-        hour:inputHour.value,
+        time:inputHour.value,
         event:inputEvent.value
     }
 
     return newEvent;
+}
+
+function setAddEventFormBox(){
+    clearBox(".input-error");
+    setInputValue("#input-event");
+    setInputValue("#input-hour");
 }
 
 function addNewEvent(){
@@ -23,7 +29,6 @@ function addNewEvent(){
     // aktualizowanie listy wydarzeń 
     console.log(newEvent)
     ajaxPostAddNewEvent(baseURL+"/calendar/php/add_event.php", newEvent);
-    closeAddEventForm();
 }
 
 function openAddEventForm(){
@@ -39,5 +44,6 @@ function closeAddEventForm(){
 }
 
 function cancelAddNewEvent(){
+    clearBox(".input-error")
     closeAddEventForm();
 }

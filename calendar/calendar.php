@@ -24,17 +24,19 @@
     <h4 onclick="closeFormAddEvent()"><span>x</span></h4>   
     <div>
         <h3 id="date-event">2-wrzesnia 2021</h3>
-        <button id="btn-new-event" onclick="openAddEventForm()">+ new</button>
-        <div id="form-add-event">
-            <form action="">
-                <input type="text" id="input-hour" class=" form-input" placeholder="hh:mm">
-                <input type="text" id="input-event" class=" form-input" placeholder="wydarzenie">
+        <button id="btn-new-event" onclick="openAddEventForm()" class="btn">+ new</button>
+            <form id="form-add-event" action="">
                 <div>
-                    <button onclick="addNewEvent()" type="button" class="form-input">Dodaj</button>
-                    <button type="button" onclick="cancelAddNewEvent()" >Anuluj</button>
+                    <input type="text" id="input-hour" class=" form-input" placeholder="hh:mm">
+                    <input type="text" id="input-event" class=" form-input" placeholder="wydarzenie">
+                    <div class="input-error"></div>
+                    <div class="form-group-btns">
+                        <button class="btn btn-add" onclick="addNewEvent()" type="button" >Dodaj</button>
+                        <button class="btn btn-cancel" type="button" onclick="cancelAddNewEvent()" >Anuluj</button>
+                    </div>
                 </div>
+            
             </form>
-        </div>
         <ul id="list-events">
             <li>event 1 
                 <div class="event-tools">
@@ -55,15 +57,13 @@
 
 
 <style>
+        /*  /////////////////////////// form ///////////////////////////////////////////////*/ 
 
     #form{
-        /* position: absolute;
-        top: 0%; */
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(255, 255, 255, 0.6);
         width: 50%;
         flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         padding: 2% 0;
         display:flex;
         transition: width 3s;
@@ -73,9 +73,7 @@
         align-self: center;
         text-align: end;
     }
-    /* #form >button:focus + #form{
-        display: none;
-    } */
+
     #form>h4>span{
         border-radius: 50%;
         background: white;
@@ -85,47 +83,87 @@
     #form > div{
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         justify-content: center;
         align-items: center;
 
     }
 
+    .btn{
+        padding: 1rem;
+        border-radius: 0.3rem;
+        justify-content: center;
+    }
+
+    #form > div> #btn-new-event{
+        background: purple;
+        color: white;
+        font-weight: bold;
+        width: 30%;
+        align-self: flex-end;
+        justify-content: center;
+    }
+
     #form > div>#form-add-event{
-        width:90%;
+        width:100%;
         display: none;
         flex-direction: column;
         justify-content: center;
         padding-right:2px;
         align-items: center;
+        background: white;
+        padding: 2rem 0;
+        border: 1px solid lightseagreen;
+        border-radius: 0.5rem;
     }
-    #form > div>#form-add-event >form{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        width: 100%;
-    }
-    #form > div>#form-add-event >form > input:focus{
+
+    #form > div>#form-add-event > div> input:focus{
         outline:none;
         border-bottom: 2px solid red;
     }
-    #form-add-event >form >.form-input{
+    #form-add-event >div>.form-input{
+        padding: 0.8rem 0.5rem;
         width: 100%;
-        padding: 0.5rem;
-        border:none;
+        margin-bottom: 5px;
+        border:1px solid #aeaeae;
     }
-    #form-add-event >form >#input-hour{
+    #form-add-event >form >div> #input-hour{
         /* width: 30%; */
     }
-    #form-add-event >form >#input-event{
+    #form-add-event >form >div > #input-event{
         /* width: 60%; */
     }
-    #form-add-event >form >button{
-        
-
+    #form-add-event >div{      
+        width: 80%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
     }
+
+
+    /* btns */
+    #form-add-event >div>.form-group-btns{      
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+    #form-add-event >div >.form-group-btns> button{      
+        width: 40%;
+        padding: 0.8rem 0;
+        color:white
+    }
+
+    .form-group-btns> .btn-add{      
+        background: blue;
+    }
+    .form-group-btns>.btn-cancel{      
+        background: pink;
+    }
+
+
+
     #form > div>#list-events{
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -135,16 +173,7 @@
         position: relative;
         padding: 1rem;
     }
-    /* #form > div>#list-events > li::before{
-        content: "x";
-        display: inline-block;
-        position:absolute;
-        border: 1px solid red;
-        padding: 0.5rem;
-        right:0;
-        top:0;
-        margin-left: 1rem;
-    } */
+
     #form > div>#list-events > li,
     #form > div>#list-events > li > .event-tools{
         background: white;
@@ -184,10 +213,20 @@
         width: 1rem;
         margin: 0 2px;
     }
+    #form-add-event>div>.input-error{
+        color: red;
+        text-align: start;
+        width: 100%;
+        font-size: 0.7rem;
+        padding-bottom: 0.5rem;
+    }
 
     .container{
         /* position: relative; */
     }
+
+
+    /*  /////////////////////////// calendar ///////////////////////////////////////////////*/ 
 
     .calendar {
         display: flex;
@@ -264,7 +303,8 @@
 
     .cal-card>.cal-card-days>.day {
         /* height: 2rem; */
-        background: #bdbdbd7a;
+        /* background: #bdbdbd7a; */
+        background: #CECFD2;
         /* height: 10vw; */
         color: white;
 
@@ -298,10 +338,12 @@
     }
 
     .cal-card>.cal-card-days>.day.current-month{
-        background:#440f53;
+        /* background:#440f53; */
+        background: #856591;
     }
     .cal-card>.cal-card-days>.day.current-month.current-day{
-        background:#ffc20a;
+        /* background:#ffc20a; */
+        background: #252226;
     }
     #current-card{
         padding: 20px 0 0 0;

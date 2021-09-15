@@ -26,7 +26,8 @@ function createNewElementDay(date,numberDay){
 
     myDiv.classList.toggle("day");
     myDiv.textContent = `${day.getDate()}`;
-    myDiv.id = setIdForDay(day.getFullYear(), day.getMonth()+1, day.getDate(), "-");
+    // myDiv.id = setIdForDay(day.getFullYear(), day.getMonth()+1, day.getDate(), "-");
+    myDiv.id = day.toLocaleDateString();
 
     myDiv.addEventListener('click', function(){
         clickedOnDay(myDiv.id)
