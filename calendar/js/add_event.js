@@ -1,15 +1,28 @@
-
+function validTime(value){
+    if(value < 10 ){
+        return "0"+value;
+    }
+    console.log(value)
+    return value;
+}
 
 function getdataForm(){
     console.log("Nowe wydarzenie xD")
-    let inputHour = getObject("#input-hour");
     let inputEvent = getObject("#input-event");
+    let inputHour = getObject("#input-hour").value;
+    let inputMinutes = getObject("#input-minute").value;
+
+    // inputHour = validTime(inputHour);
+    // inputMinutes = validTime(inputMinutes);
+
+    // let time = inputHour+":"+inputMinutes;
 
     const date = getObject("#date-event").innerText;
 
     const newEvent={
         date:date,
-        time:inputHour.value,
+        hour:inputHour,
+        minutes:inputMinutes,
         event:inputEvent.value
     }
 
@@ -18,8 +31,9 @@ function getdataForm(){
 
 function setAddEventFormBox(){
     clearBox(".input-error");
-    setInputValue("#input-event");
-    setInputValue("#input-hour");
+    setInputValue("#input-event", "");
+    setInputValue("#input-hour", "");
+    setInputValue("#input-minute", "");
 }
 
 function addNewEvent(){
@@ -27,12 +41,15 @@ function addNewEvent(){
 
     // dodanie nowego wydarzenia
     // aktualizowanie listy wydarzeń 
-    console.log(newEvent)
+    // console.log(newEvent)
     ajaxPostAddNewEvent(baseURL+"/calendar/php/add_event.php", newEvent);
 }
 
 function openAddEventForm(){
     console.log("Add event form")
+
+    setVisibleBox(".btn-add", true);
+    setVisibleBox(".btn-edit", false);
     setVisibleBox("#form-add-event", true);
     setVisibleBox("#btn-new-event", false);
 }
@@ -44,6 +61,6 @@ function closeAddEventForm(){
 }
 
 function cancelAddNewEvent(){
-    clearBox(".input-error")
+    setAddEventFormBox();
     closeAddEventForm();
 }

@@ -50,9 +50,9 @@ function clearBox(elem){
     console.log("clear box ")
 }
 
-function setInputValue(elem){
+function setInputValue(elem, value){
     let el = getObject(elem);
-    console.log("set value box ", el)
-    el.value="";
+    // console.log("set value box ", el)
+    el.value=value;
 }
 

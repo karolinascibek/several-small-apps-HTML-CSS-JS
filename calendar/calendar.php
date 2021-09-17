@@ -27,10 +27,21 @@
         <button id="btn-new-event" onclick="openAddEventForm()" class="btn">+ new</button>
             <form id="form-add-event" action="">
                 <div>
-                    <input type="text" id="input-hour" class=" form-input" placeholder="hh:mm">
-                    <input type="text" id="input-event" class=" form-input" placeholder="wydarzenie">
+                    <!-- <input type="text" id="input-hour" class=" form-input" placeholder="hh:mm"> -->
+
+                    <div id="form-group-time" class="form-group-row ">
+                        <input type="number" id="input-hour" class=" form-input" placeholder="godzina" min=0 max=23 value=0>
+                        <div>:</div>
+                        <input type="number" id="input-minute" class=" form-input" placeholder="minuty" min=0 max=59 value=0>
+                    </div>
+
+                    <div class="form-group-row ">
+                        <input type="text" id="input-event" class=" form-input" placeholder="wydarzenie">   
+                    </div>
+
                     <div class="input-error"></div>
-                    <div class="form-group-btns">
+                    <div class="form-group-row">
+                        <button class="btn btn-edit" onclick="editEventBtn()" type="button" >Edytuj</button>
                         <button class="btn btn-add" onclick="addNewEvent()" type="button" >Dodaj</button>
                         <button class="btn btn-cancel" type="button" onclick="cancelAddNewEvent()" >Anuluj</button>
                     </div>
@@ -93,6 +104,9 @@
         padding: 1rem;
         border-radius: 0.3rem;
         justify-content: center;
+        border:0;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out ;
     }
 
     #form > div> #btn-new-event{
@@ -104,6 +118,10 @@
         justify-content: center;
     }
 
+    #form > div> #btn-new-event:hover{
+        background: #9468a2;
+    }
+
     #form > div>#form-add-event{
         width:100%;
         display: none;
@@ -113,15 +131,16 @@
         align-items: center;
         background: white;
         padding: 2rem 0;
-        border: 1px solid lightseagreen;
         border-radius: 0.5rem;
+        -webkit-box-shadow:  -10px 0px 13px -7px #b7b4b4, 10px 0px 13px -7px #b2b0b0, 5px 5px 15px 5px rgb(0 0 0 / 0%);
+        box-shadow: -10px 0px 13px -7px #b7b4b4, 10px 0px 13px -7px #b2b0b0, 5px 5px 15px 5px rgb(0 0 0 / 0%);
     }
 
     #form > div>#form-add-event > div> input:focus{
         outline:none;
         border-bottom: 2px solid red;
     }
-    #form-add-event >div>.form-input{
+    .form-input{
         padding: 0.8rem 0.5rem;
         width: 100%;
         margin-bottom: 5px;
@@ -140,24 +159,47 @@
         flex-direction: column;
     }
 
+    /* select */
+
+    #form-add-event>div>#form-group-time{
+        width: 100%;
+    }
+
+    #form-add-event>div>#form-group-time>input{
+        width: 45%;
+    }
+    #form-group-time div:nth-child(2){
+        font-weight: bold;
+        width: 10%;
+        text-align: center;
+        margin: auto;
+    }
+
 
     /* btns */
-    #form-add-event >div>.form-group-btns{      
+    #form-add-event >div>.form-group-row{      
         width: 100%;
         justify-content: center;
         display: flex;
     }
-    #form-add-event >div >.form-group-btns> button{      
+    #form-add-event >div >.form-group-row> button{      
         width: 40%;
         padding: 0.8rem 0;
         color:white
     }
-
-    .form-group-btns> .btn-add{      
-        background: blue;
+    .btn-add{      
+        background: purple;
+        margin-right: 2px;
     }
-    .form-group-btns>.btn-cancel{      
-        background: pink;
+    .btn-cancel{      
+        background:  #9468a2;
+    }
+    .btn-edit{
+        background: lightgreen;
+        margin-right: 2px;
+    }
+    .btn:hover{
+     background: #c7c7cb;
     }
 
 
@@ -207,11 +249,15 @@
     }  
     #form > div>#list-events > li > .event-tools> div{
         background: white;
-        border: 1px solid black;
         padding: 0.5rem;
         border-radius: 0.2rem;
         width: 1rem;
         margin: 0 2px;
+        color: #7ba2c5;
+    }
+    #form > div>#list-events > li > .event-tools> div:hover{
+        background: #7ba2c5;
+        color: white;
     }
     #form-add-event>div>.input-error{
         color: red;
@@ -307,6 +353,7 @@
         background: #CECFD2;
         /* height: 10vw; */
         color: white;
+        cursor: pointer;
 
     }
     .cal-card>.cal-card-days>.day:hover,
@@ -363,4 +410,5 @@
 <script src="./calendar/js/list_events.js" defer></script>
 <script src="./calendar/js/add_event.js" defer></script>
 <script src="./calendar/js/event_tools.js" defer></script>
+<script src="./calendar/js/edit_event.js" defer></script>
 

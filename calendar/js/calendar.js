@@ -111,7 +111,7 @@ function calendar( currentDate){
     let weekdays = ["Pon", "Wt", "Śr", "Cz", "Pt", "So", "Nd"];
     let months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 
-    console.log(currentDate.getMonth());
+    // console.log(currentDate.getMonth());
     setNav(currentDate, months);
     setDays(currentDate);
     setWeekdays(weekdays);

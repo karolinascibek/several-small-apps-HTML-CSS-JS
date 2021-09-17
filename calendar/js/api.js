@@ -44,3 +44,19 @@ function ajaxPostAddNewEvent(url,dataForm){
     });
 
 }
+
+function ajaxPostEditEvent(url, dataForm){
+    fetch(url,{
+        method:'POST',
+        body:JSON.stringify(dataForm),
+        headers:new Headers()
+    })
+    .then(response=>response.json())
+    .then(data=>{
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+     });
+
+}

@@ -2,7 +2,12 @@
 
 require_once "./db.php";
 
+
 //walidacja danych POST
+
+
+
+
 // zapisanie danych do bazy 
 // pobranie danych z bazy
 $response=[
@@ -22,22 +27,33 @@ if( $_SERVER["REQUEST_METHOD"]=="POST"){
 try{
     $post = json_decode(file_get_contents('php://input'), true);
     $post['date'] = str_replace('.', "-", $post['date']);
+    $response["post"] =$post;
 
     $db = new Event();
 
     // dodanie nowego eventu
     if(!empty($post['date'])){
 
-        if(!empty($post['time']) || !empty($post['event'])){
-            $post['user_is']=1;
-            $post['status']=1;
-            
-            $columns ="`date`, `event`, `user_id`, `status`,`time`";
-            $values = "'".$post['date']."','".$post['event']."', 1, 0, '".$post['time']."'";
-            
-            $env = $db->created($columns, $values);
+        if(!empty($post['hour']) || !empty($post['event']) || !empty($post['minutes']) ){
 
-            $response["status"]=200;
+            if($db->validTime($post["hour"],$post["minutes"])){
+                $post['user_id']=1;
+                $post['status']=0;
+                $post['time'] = $db->setTimeToDBEvent( $post["hour"],$post["minutes"]);
+                
+                // $columns ="`date`, `event`, `user_id`, `status`,`time`";
+                // $values = "'".$post['date']."','".$post['event']."', 1, 0, '".$post['time']."'";
+                $columns = $db->getColumns();
+                $values = $db->setValuesToColumns($post);
+                
+                $env = $db->created($columns, $values);
+
+                $response["status"]=200;
+            }
+            else{
+                $response["error"]="Błedna wartość w polu godziny lub minut!";
+                $response["status"]=400;
+            }
 
         }
         else{
@@ -50,7 +66,7 @@ try{
     }
 
     // wyświetlenie aktualnej listy wydarzeń
-    $events = $db->getEventForDay($post['date']);       
+    $events = $db->getEventForDaySort($post['date'], "time");       
     $response['events'] = $events->fetch_all(MYSQLI_ASSOC);
     $db->close();
     

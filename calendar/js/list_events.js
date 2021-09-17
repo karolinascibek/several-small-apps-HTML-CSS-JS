@@ -10,7 +10,9 @@ function closeFormAddEvent(){
 function createSingleEvent(ev){
         let newEvent =  document.createElement("li");
         newEvent.innerText = `${ev.time} ${ev.event}`;
-        let boxTools = createEventTools();
+        newEvent.id = ev.id;
+
+        let boxTools = createEventTools(ev);
         newEvent.appendChild(boxTools);
         // tool.addEventListener('click', function(){
         //     setVisibleBox()

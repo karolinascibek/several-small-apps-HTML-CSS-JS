@@ -8,7 +8,7 @@ $post = json_decode(file_get_contents('php://input'), true);
 $date = str_replace('.', "-", $post['date']);
 
 $db = new Event();
-$events = $db->getEventForDay($date);
+$events = $db->getEventForDaySort($date, "time");
 $data['events'] = $events->fetch_all(MYSQLI_ASSOC);
 
 $db->close();
