@@ -53,9 +53,14 @@ function createSingleEventTool(event,icon, onClickFunction){
 // function for tool
 function deleteEvent(event){
     console.log("Usuwam event", event);
-
+    const data ={
+        id:event.id
+    }
+    ajaxPostDeleteEvent(baseURL+'calendar/php/delete_event.php', data);
 }
+
 function editEvent(event){
+    // otoworzenie formularza do edycji
     console.log("edytuje event", event);
     
     setVisibleBox(".btn-add", false);
@@ -77,7 +82,10 @@ function editEvent(event){
 
 }
 function markEvent(event){
-    console.log("zaznaczam event",event);
+    let li =  getObject(`#event-${event.id}`);
+    console.log("zaznaczam event",li);
+    event.status = setStatusInEvent(event.status, li);
+    ajaxPostEditStatusEvent(baseURL+'calendar/php/edit_status_event.php', event);
 }
 
 // box tools

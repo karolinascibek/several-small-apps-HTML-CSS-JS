@@ -112,6 +112,7 @@ function calendar( currentDate){
     let months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
 
     // console.log(currentDate.getMonth());
+    closeFormAddEvent();
     setNav(currentDate, months);
     setDays(currentDate);
     setWeekdays(weekdays);

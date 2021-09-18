@@ -5,6 +5,7 @@ define("DB_USER", "root");
 define("DB_PASS", "root");
 define("DB_NAME", "db_test");
 
+
 class db{
     private $name = DB_NAME;
     private $host = DB_HOST;

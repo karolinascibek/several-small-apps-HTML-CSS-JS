@@ -2,21 +2,41 @@ console.log("Event HElloe!!")
 
 function closeFormAddEvent(){
     let cal = getObject(".calendar");
-    let form = getObject("#form");
-    form.style.display = 'none';
+    // let form = getObject("#form");
+    // form.style.display = 'none';
+    setVisibleBox("#form", false);
     // form.classList.remove("form-visible")
 }
 
-function createSingleEvent(ev){
-        let newEvent =  document.createElement("li");
-        newEvent.innerText = `${ev.time} ${ev.event}`;
-        newEvent.id = ev.id;
+function setStatusInEvent(status, elem){
+    console.log(Number(status))
+    if(Number(status) === 0){
+        status = 1;
+        elem.classList.add("mark-event");
+        console.log("mark")
+    }else{
+        status = 0;
+        elem.classList.remove("mark-event");
+        console.log("un-mark")
+    }
+    return status;
+}
 
+
+
+function createSingleEvent(ev){
+        let newEvent =  document.createElement(`li`);
+        newEvent.innerText = `${ev.time} ${ev.event}`;
+        newEvent.id = "event-"+ev.id;
+        if(Number(ev.status) === 1){
+            newEvent.classList.add("mark-event");
+            console.log(ev.status)
+        }
+
+
+        // box z narzedziami
         let boxTools = createEventTools(ev);
         newEvent.appendChild(boxTools);
-        // tool.addEventListener('click', function(){
-        //     setVisibleBox()
-        // } );
         return newEvent;
 }
 

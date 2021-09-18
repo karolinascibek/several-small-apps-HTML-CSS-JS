@@ -4,12 +4,17 @@ function editEventBtn() {
     let array = editForm.id.split("-");
     let id = array[array.length -1];
 
-    console.log("id",id)
+    const inputEvent = getObject("#input-event").value;
+    const inputHour = getObject("#input-hour").value;
+    const inputMinutes = getObject("#input-minute").value;
 
     let data={
-        event:"hellow edit event",
-        id:id
+        id:id,
+        event:inputEvent,
+        minutes: inputMinutes,
+        hour:inputHour
     }
+
 
     ajaxPostEditEvent(baseURL+'calendar/php/edit_event.php', data);
     console.log("edytuj")

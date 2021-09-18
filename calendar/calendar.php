@@ -21,7 +21,7 @@
 </div>
 
 <div id="form">
-    <h4 onclick="closeFormAddEvent()"><span>x</span></h4>   
+    <h4 onclick="closeFormAddEvent()"><span><i class="fas fa-times"></i></span></h4>   
     <div>
         <h3 id="date-event">2-wrzesnia 2021</h3>
         <button id="btn-new-event" onclick="openAddEventForm()" class="btn">+ new</button>
@@ -76,7 +76,7 @@
         flex-direction: column;
         align-items: center;
         padding: 2% 0;
-        display:flex;
+        display:none;
         transition: width 3s;
     }
     #form >h4{
@@ -89,6 +89,7 @@
         border-radius: 50%;
         background: white;
         padding: 0.7em 1em;
+        cursor: pointer;
     }
 
     #form > div{
@@ -98,6 +99,9 @@
         justify-content: center;
         align-items: center;
 
+    }
+    #date-event{
+        word-break: break-word;
     }
 
     .btn{
@@ -215,6 +219,9 @@
         position: relative;
         padding: 1rem;
     }
+    .mark-event{
+        text-decoration: line-through;
+    }
 
     #form > div>#list-events > li,
     #form > div>#list-events > li > .event-tools{
@@ -265,6 +272,23 @@
         width: 100%;
         font-size: 0.7rem;
         padding-bottom: 0.5rem;
+    }
+
+    @media screen and (max-width: 460px){
+        #form-add-event >div >.form-group-row{      
+            flex-direction: column;
+        }
+        #form-add-event>div>#form-group-time>input,
+        #form-add-event >div >.form-group-row>button {
+            width: 100%;
+        }
+        #form-add-event >div >.form-group-row>.btn-cancel {
+            margin-top: 2px;
+        }
+        .form-input {
+            padding: 0.8rem 0;
+            text-align: center;
+        }
     }
 
     .container{
@@ -405,9 +429,9 @@
 </style>
 
 <script src="./calendar/js/general.js" defer></script>
+<script src="./calendar/js/list_events.js" defer></script>
 <script src="./calendar/js/calendar.js" defer></script>
 <script src="./calendar/js/api.js" defer></script>
-<script src="./calendar/js/list_events.js" defer></script>
 <script src="./calendar/js/add_event.js" defer></script>
 <script src="./calendar/js/event_tools.js" defer></script>
 <script src="./calendar/js/edit_event.js" defer></script>

@@ -6,18 +6,23 @@ require_once("./nav/nav.php");
 <div class="projects">
     <ul>
         <li>
+            <div><i class="far fa-image"></i></div>
             <a href="./calendar.php">kalendarz</a>
         </li>
         <li>
+            <div><i class="far fa-image"></i></div>
             <a href="./forms/forms.php">formularze</a>
         </li>
         <li>
+            <div><i class="far fa-image"></i></div>
             <a href="#">gra zapamietaj karte</a>
         </li>
         <li>
+            <div><i class="far fa-image"></i></div>
             <a href="#">snajper?</a>
         </li>
         <li>
+            <div><i class="far fa-image"></i></div>
             <a href="./icons.php">Icony</a>
         </li>
     </ul>
@@ -35,8 +40,6 @@ require_once("./footer/footer.php");
         text-align: center;
         padding: 2em 0;
         color: gray;
-        border-radius: 0.5em;
-        background: white;
         font-weight: bold;
         transition: transform 0.3s;
     }
@@ -51,8 +54,18 @@ require_once("./footer/footer.php");
     }
     div > ul > li{
         list-style: none;
+        margin:  1em ;
+        border-radius: 0.5em;
+        background: white;
+        width: 40%;
+
+    }
+    div > ul > li>div{
         width: 100%;
-        margin:  1em 0;
+    }
+    ul > li>div>i{
+        font-size: 300%;
+        
     }
     div{
         display: flex;
@@ -62,5 +75,7 @@ require_once("./footer/footer.php");
         width: 70%;
         margin: 0;
         padding: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
 </style>

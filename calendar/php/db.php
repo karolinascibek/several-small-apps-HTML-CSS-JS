@@ -23,6 +23,18 @@ class Event  extends db{
         $query = "INSERT INTO ".$this->table."(".$columns.") VALUES (".$values.")";
         return $this->db->query($query);
     }
+
+    public function edit($values){
+        $query = "UPDATE ".$this->table." SET event='".$values['event']."', time='".$values['time']."',status='".$values['status']."' WHERE id=".$values['id'];
+        return $this->db->query($query);
+    }
+
+    public function delete($id){
+        $query = "DELETE FROM ".$this->table." WHERE id=".$id;
+        return $this->db->query($query);
+    }
+
+
     public function formatDate($old,$new, $value){
         return str_replace($old, $new, $value);
     }
