@@ -3,27 +3,35 @@ require_once("./header/header.php");
 require_once("./nav/nav.php");
 ?>
 
-<div class="projects">
-    <ul>
+<div id="projects">
+    <ul id="projects-list">
         <li>
-            <div><i class="far fa-image"></i></div>
-            <a href="./calendar.php">kalendarz</a>
+                <a href="./calendar.php">
+                <div><i class="far fa-calendar-alt"></i></div>
+                <h4>kalendarz</h4>
+            </a>
         </li>
         <li>
-            <div><i class="far fa-image"></i></div>
-            <a href="./forms/forms.php">formularze</a>
+            <a href="./forms/forms.php">
+                <div><i class="far fa-image"></i></div>
+                <h4>formularze</h4>
+            </a>
         </li>
         <li>
-            <div><i class="far fa-image"></i></div>
-            <a href="#">gra zapamietaj karte</a>
+            <a href="./memory_game.php">
+            <div><i class="fas fa-gamepad"></i></div>
+            <h4>Gra pamięciowa</h4></a>
         </li>
         <li>
+            <a href="./memory_game.php">
             <div><i class="far fa-image"></i></div>
-            <a href="#">snajper?</a>
+            <h4>Gra pamięciowa</h4></a>
         </li>
         <li>
-            <div><i class="far fa-image"></i></div>
-            <a href="./icons.php">Icony</a>
+            <a href="./icons.php">
+            <div><i class="far fa-square"></i></div>
+            <h4>Ikony</h4>
+        </a>
         </li>
     </ul>
 </div>
@@ -33,7 +41,7 @@ require_once("./footer/footer.php");
 ?>
 
 <style>
-    div > ul > li > a{
+    #projects-list > li > a{
         text-transform: capitalize;
         text-decoration: none;
         display: block;
@@ -41,41 +49,53 @@ require_once("./footer/footer.php");
         padding: 2em 0;
         color: gray;
         font-weight: bold;
-        transition: transform 0.3s;
+        word-break: break-all;
     }
-    div > ul > li > a:hover{
+    #projects-list > li:hover{
+        color: rgb(251 251 251 / 97%);
+       /* -webkit-box-shadow: 0px 0px 10px 3px rgb(135 130 130 / 72%);; 
+        box-shadow:0px 0px 10px 3px rgb(135 130 130 / 72%);; */
+        background: #9c9c9c;
+    }
+    #projects-list > li:hover> a{
        /* border-bottom: 3px solid red;
        background: lightgray; */
-       font-size: 1.2em;
-       color: rgba(189, 138, 138, 0.97);
-       -webkit-box-shadow: 0px 5px 5px 0px rgba(189, 138, 138, 0.72); 
-        box-shadow:0px 5px 5px 0px rgba(189, 138, 138, 0.72);
-        transform: scale(1.02);
+       /* color: rgba(189, 138, 138, 0.97); */
+       color: rgb(251 251 251 / 97%);;
     }
-    div > ul > li{
+    #projects-list > li{
         list-style: none;
         margin:  1em ;
         border-radius: 0.5em;
         background: white;
-        width: 40%;
+        width: 20%;
+        padding: 1rem;
+        transition: background 0.5s;
 
     }
-    div > ul > li>div{
+    #projects-list > li>a>div{
         width: 100%;
+        font-size: 500%;
     }
-    ul > li>div>i{
+    #projects-list > li>div>i{
         font-size: 300%;
         
     }
-    div{
+    div#projects{
         display: flex;
         justify-content: center;
+
     }
-    div>ul{
+    #projects-list{
         width: 70%;
         margin: 0;
         padding: 0;
         display: flex;
         flex-wrap: wrap;
+    }
+    @media screen and (max-width:750px){
+    #projects-list > li{
+        width: 100%;
+    }
     }
 </style>

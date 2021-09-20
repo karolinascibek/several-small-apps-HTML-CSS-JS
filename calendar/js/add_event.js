@@ -7,7 +7,7 @@ function validTime(value){
 }
 
 function getdataForm(){
-    console.log("Nowe wydarzenie xD")
+    // console.log("Nowe wydarzenie xD")
     let inputEvent = getObject("#input-event");
     let inputHour = getObject("#input-hour").value;
     let inputMinutes = getObject("#input-minute").value;
@@ -46,7 +46,7 @@ function addNewEvent(){
 }
 
 function openAddEventForm(){
-    console.log("Add event form")
+    // console.log("dodaj wydarzenie")
 
     setVisibleBox(".btn-add", true);
     setVisibleBox(".btn-edit", false);
@@ -55,7 +55,7 @@ function openAddEventForm(){
 }
 
 function closeAddEventForm(){
-    console.log(" cancel Add event form")
+    // console.log(" cancel Add event form")
     setVisibleBox("#form-add-event", false);
     setVisibleBox("#btn-new-event", true);
 }

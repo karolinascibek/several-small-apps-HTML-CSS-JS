@@ -1,23 +1,17 @@
-console.log("Event HElloe!!")
+
 
 function closeFormAddEvent(){
-    let cal = getObject(".calendar");
-    // let form = getObject("#form");
-    // form.style.display = 'none';
     setVisibleBox("#form", false);
-    // form.classList.remove("form-visible")
 }
 
 function setStatusInEvent(status, elem){
-    console.log(Number(status))
+    
     if(Number(status) === 0){
         status = 1;
         elem.classList.add("mark-event");
-        console.log("mark")
     }else{
         status = 0;
         elem.classList.remove("mark-event");
-        console.log("un-mark")
     }
     return status;
 }
@@ -30,7 +24,6 @@ function createSingleEvent(ev){
         newEvent.id = "event-"+ev.id;
         if(Number(ev.status) === 1){
             newEvent.classList.add("mark-event");
-            console.log(ev.status)
         }
 
 
@@ -67,7 +60,6 @@ function clearListEvents(){
 }
 
 function setHeadline(dayId){
-    console.log(dayId)
     let dateEvent = getObject("#date-event");
     dateEvent.innerText = dayId;
 }
@@ -78,8 +70,6 @@ function takeListEvent(){
 
 
 function clickedOnDay(dayId){
-
-    console.log("Klik")
     setVisibleBox("#form", true);
     closeAddEventForm();
     setAddEventFormBox();
@@ -92,7 +82,7 @@ function clickedOnDay(dayId){
 
     //tworzenie nowych elementów
     // api do pobierania i zapisywania dancyh
-    console.log(new Date(dayId).toLocaleString())
+    // console.log(new Date(dayId).toLocaleString())
     ajaxGetListEvents(baseURL+'calendar/php/list_events.php', {date:dayId});
    
 }

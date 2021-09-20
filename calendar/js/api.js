@@ -8,7 +8,7 @@ function ajaxGetListEvents(url,dataForm){
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data);
+            // console.log('Success:', data);
             createEvents(data.events);
         })
         .catch((error) => {
@@ -26,13 +26,13 @@ function ajaxPostAddNewEvent(url,dataForm){
     .then(response => response.json())
     .then(data => {
         // aktualizowanie listy wydarzeń 
-       console.log('Success:', data);
+        //console.log('Success:', data);
        if(data.status === 200){
            setAddEventFormBox()
            closeAddEventForm();
        }
        else{
-           console.log(data.error)
+        //console.log(data.error)
            let err = getObject(".input-error");
            err.innerText = data.error;
        }
@@ -54,13 +54,13 @@ function ajaxPostEditEvent(url, dataForm){
     .then(response=>response.json())
     .then(data=>{
         // aktualizowanie listy wydarzeń 
-       console.log('Success:', data);
+        //console.log('Success:', data);
        if(data.status === 200){
            setAddEventFormBox()
            closeAddEventForm();
        }
        else{
-           console.log(data.error)
+        //    console.log(data.error)
            let err = getObject(".input-error");
            err.innerText = data.error;
        }
@@ -82,7 +82,7 @@ function ajaxPostEditStatusEvent(url, dataForm){
     .then(response=>response.json())
     .then(data=>{
         // aktualizowanie listy wydarzeń 
-       console.log('Success:', data);
+    //    console.log('Success:', data);
     })
     .catch((error) => {
         console.error('Error:', error);
@@ -98,7 +98,7 @@ function ajaxPostDeleteEvent(url, dataForm){
     .then(response=>response.json())
     .then(data=>{
         // aktualizowanie listy wydarzeń 
-       console.log('Success:', data);
+    //    console.log('Success:', data);
         clearListEvents();
         createEvents(data.events);
     })

@@ -17,5 +17,5 @@ function editEventBtn() {
 
 
     ajaxPostEditEvent(baseURL+'calendar/php/edit_event.php', data);
-    console.log("edytuj")
+    // console.log("edytuj")
 }

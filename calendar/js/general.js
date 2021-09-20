@@ -47,7 +47,6 @@ function setVisibleBox(elem, isVisible){
 function clearBox(elem){
     let el = getObject(elem);
     el.innerText="";
-    console.log("clear box ")
 }
 
 function setInputValue(elem, value){
