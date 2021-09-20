@@ -68,7 +68,7 @@ require_once("./footer/footer.php");
         margin:  1em ;
         border-radius: 0.5em;
         background: white;
-        width: 20%;
+        width: 25%;
         padding: 1rem;
         transition: background 0.5s;
 
@@ -93,9 +93,14 @@ require_once("./footer/footer.php");
         display: flex;
         flex-wrap: wrap;
     }
-    @media screen and (max-width:750px){
+    @media screen and (max-width:930px){
     #projects-list > li{
         width: 100%;
+    }
+    }
+    @media screen and (min-width:931px) and (max-width:1250px){
+    #projects-list > li{
+        width: 40%;
     }
     }
 </style>
