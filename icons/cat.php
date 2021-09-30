@@ -29,28 +29,23 @@
         var paw = document.querySelector(".paw");
         var width = paw.offsetWidth;
         var height = paw.offsetHeight;
-
         ears.forEach(ear => {
             ear.style.borderBottom = `${height*2}px solid black`;
             ear.style.borderLeft = `${width/2}px solid transparent`;
             ear.style.borderRight = `${width/2}px solid transparent`;
         })
     }
-
     function setNoseSize() {
         var nose = document.querySelectorAll(".nose");
         var mouth = document.querySelector(".part-mouth");
         var width = mouth.offsetWidth;
         var height = mouth.offsetHeight;
-
-
         nose.forEach(n => {
             n.style.borderTop = `${height/2}px solid pink`;
             n.style.borderLeft = `${width/2}px solid transparent`;
             n.style.borderRight = `${width/2}px solid transparent`;
         })
     }
-
     setEarSize();
     setNoseSize();
     window.addEventListener("resize", setEarSize);

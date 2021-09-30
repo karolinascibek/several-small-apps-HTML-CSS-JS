@@ -20,8 +20,11 @@ require_once("./nav/nav.php");
 require_once("./footer/footer.php");
 ?>
 
-
 <style>
-
+    #sectionAfterNav{
+        margin-bottom: 0px;;
+    }
 </style>
+
+
 

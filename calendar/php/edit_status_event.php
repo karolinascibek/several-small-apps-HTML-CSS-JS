@@ -3,7 +3,7 @@
 require_once "./db.php";
 
 $response=[
-    "resp"=>"Edytowano wydarzenie MARK"
+    "resp"=>"Edytowano wydarzenie zaznaczenie/odznaczenie"
 ];
 
 try{
@@ -26,7 +26,7 @@ try{
         $response["status"]=200;
     }
     else {
-        $response["error"]="Coś poszłonie tak !!!";
+        $response["error"]="Coś poszło nie tak !!!";
         $response["status"]=400;
     }
 
