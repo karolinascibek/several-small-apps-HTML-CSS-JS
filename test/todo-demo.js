@@ -24,7 +24,7 @@ while( comand !== "quit"){
         let input = parseInt(prompt("Give a index of todo"));
         if(input){
            let d= todos.splice(input,1);
-            console.log("remove ", d);
+            console.log("remove     ", d);
         }
         else{
             console.log("Nie ma takiego todo!!! Wybierz poprawny index.");

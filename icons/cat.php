@@ -20,6 +20,8 @@
     </div>
 </div>
 
+<style></style>
+
 
 <script  defer>
     function setEarSize() {

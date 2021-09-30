@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="nav/css/nav_style.css" type="text/css">
+    <link rel="stylesheet" href="global/css/style.css" type="text/css">
     <link rel="stylesheet" href="icons/css/shapes_style.css" type="text/css">
     <link rel="stylesheet" href="forms/css/forms_style.css" type="text/css">
 

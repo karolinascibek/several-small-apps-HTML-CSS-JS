@@ -2,7 +2,7 @@
 require_once("./header/header.php");
 require_once("./nav/nav.php");
 
-require_once("./calendar/calendar.php");
+require_once("./calendar/index.php");
 ?>
 
 

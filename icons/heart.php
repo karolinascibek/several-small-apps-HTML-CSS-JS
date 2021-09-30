@@ -9,6 +9,8 @@
     </div>
 </div>
 
+<style></style>
+
 <script>
     var cir = document.querySelector("#ear-heart");
     function setTriangleSize() {

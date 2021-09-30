@@ -83,3 +83,39 @@
     </div>
 </div>
 
+
+<style>
+    
+.row{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.col{
+    /** N E S W **/
+    margin: 1% 1% 1% 1%;
+    height: 200px ;
+    width:200px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 425px){
+    .col{
+        width: 50%;
+        height: 50vw;
+    }
+}
+.shape{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    box-shadow: 0 0 1em #727272;
+}
+</style>
