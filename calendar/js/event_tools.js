@@ -67,6 +67,7 @@ function editEvent(event){
     setVisibleBox(".btn-edit", true);
     setVisibleBox("#form-add-event", true);
     setVisibleBox("#btn-new-event", false);
+    setInnerText(".input-error","");
 
     let time = event.time.split(":");
     let hour = time[0];

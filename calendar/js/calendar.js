@@ -1,4 +1,3 @@
-
 // nagłowek kalendarza
 function setNav(date, months) {
     let month = parseInt(date.getMonth());
@@ -119,7 +118,4 @@ function calendar( currentDate){
 }
 ///////////////////////////////////////////////////////
 
-//stałe
-let currentDate = new Date(Date.now());
-currentDate.setDate(1);
-calendar(currentDate);
+

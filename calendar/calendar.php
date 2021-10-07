@@ -28,4 +28,5 @@
 <script src="./calendar/js/add_event.js" defer></script>
 <script src="./calendar/js/event_tools.js" defer></script>
 <script src="./calendar/js/edit_event.js" defer></script>
+<script src="./calendar/js/main.js" defer></script>
 

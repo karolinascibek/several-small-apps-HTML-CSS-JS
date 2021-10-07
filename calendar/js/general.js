@@ -55,3 +55,9 @@ function setInputValue(elem, value){
     el.value=value;
 }
 
+function setInnerText(elem, value){
+    let el = getObject(elem);
+    // console.log("set value box ", el)
+    el.innerText = value;
+}
+
