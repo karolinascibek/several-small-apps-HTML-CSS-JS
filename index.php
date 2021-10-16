@@ -10,7 +10,7 @@ require_once("./nav/nav.php");
 <div >
 </div>
 <div id="start-page">
-    <img src="./img/forest.jpg" alt="">
+    <!-- <img src="./img/forest.jpg" alt=""> -->
 </div>
 <?php 
 //require_once("./shapes.php");

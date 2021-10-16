@@ -8,7 +8,7 @@
         <?php foreach ($nav as $key => $value) { ?>
             <a class="nav-link" href="<?= $value ?>"> <?= $key ?> </a>
         <?php } ?>
-        <!-- <button class="btn-menu-wrap-close" >X</button> -->
+            <button class="btn-menu-wrap-close" >&times;</button>
         <button class="nav-link btn-wrap-menu "><i class="fas fa-bars"></i></button>
         <div class="box-wrap">
             <ul>

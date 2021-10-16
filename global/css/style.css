@@ -4,6 +4,7 @@ body, html{
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
 }
 header{
     display: flex;
@@ -15,13 +16,19 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100%;
 }
 
     #start-page{
         width: 100%;
+        background-image: url(../../img/forest.jpg);
+        min-height: 100%;
+        background-size: cover;
+        background-position: 50% 0;
     }
     #start-page > img{
-        max-width: 100%;
+        /* max-width: 100%; */
+        /* height: 100vh; */
     }
     #sectionAfterNav{
         margin-bottom: 0px;;

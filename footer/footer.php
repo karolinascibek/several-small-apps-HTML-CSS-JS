@@ -1,6 +1,6 @@
 <footer>
     <div id="footer" >
-        <div>FOOTER</div>
+            <p>Przykładowy szablon stworzony przez Karolina Ścibek</p>
     </div>
 </footer>
 </body>
@@ -8,12 +8,14 @@
 
 <style>
     #footer{
-        border-top: 1px solid rgb(80,80,80);
-        margin-top: 100px;
-        margin-bottom: 100px;
+        height: 100px;
         text-align: center;
+        /* background: rgb(30,30,30); */
+        color:lightskyblue
     }
-    #footer > div {
+    footer > div {
+
         margin-top: 50px;
+        padding: 1rem;
     }
 </style>
