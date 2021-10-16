@@ -21,5 +21,8 @@
 3. W folderze ```/global/database/db.php``` ustawić baze danych.
 4. w pliku ```/global/js.ajax.js``` podac ścieżke bazowo projektu
 
+# 2. Gra 
+W trakcie tworzenia 
+
 
 
