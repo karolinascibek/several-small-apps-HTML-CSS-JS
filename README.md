@@ -17,9 +17,9 @@
 
 ## Uruchomienie projektu
 1. Pobrać repozytorium
-2. Stworzyć baze danych na lokalhost. Baze nalezy zaimportować z pliku baza.sql. Plik zanjduje się w projekcie
-3. W folderze /global/database/db.php ustawić baze danych.
-4. w pliku /global/js.ajax.js podac ścieżke bazowo projektu
+2. Stworzyć baze danych na lokalhost. Baze nalezy zaimportować z pliku ```baza.sql```. Plik zanjduje się w projekcie
+3. W folderze ```/global/database/db.php``` ustawić baze danych.
+4. w pliku ```/global/js.ajax.js``` podac ścieżke bazowo projektu
 
 
 
