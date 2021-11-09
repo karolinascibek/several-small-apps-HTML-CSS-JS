@@ -2,12 +2,13 @@
 
 # 1. Kalendarz
 ## Opis
-* Aplikacja ma za wyświetlić kalendarz na miesiąc. 
+* Aplikacja ma za zadanie wyświetlić kalendarz na miesiąc. 
 * Umożliwia przewiajnie na nastepny lub poprzedni miesiąc.
 * Wyróżnia aktualną date 
 * Mozliwość dodania listy zadań do danego dnia
+* Edytowanie listy zadań, usunięcie oraz odznaczenie zadania.
 
-## Technologir
+## Technologie
 * JavaScript, PHP, HTML, CSS, MySQL
 
 # Instalacja projektu

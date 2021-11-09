@@ -1,3 +1,6 @@
+// --- kod napisany strukturalnie 
+
+
 function createCards(n=8) {
     const colors = drawColors(n/2);
     let temp = [...colors, ...colors];
