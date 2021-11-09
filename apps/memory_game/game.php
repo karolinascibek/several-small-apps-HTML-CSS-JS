@@ -110,10 +110,10 @@
     }
 </style>
 
-<script src="./memory_game/js/nav.js"></script>
+<script src="./apps/memory_game/js/nav.js"></script>
 
-<script src="./memory_game/js/board.js"></script>
-<script src="./memory_game/js/app.js"></script>
+<script src="./apps/memory_game/js/board.js"></script>
+<script src="./apps/memory_game/js/app.js"></script>
 
 <!-- <script src="./memory_game/js/card.js"></script>
 <script src="./memory_game/js/board.js"></script> -->

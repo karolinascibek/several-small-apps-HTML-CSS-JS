@@ -2,7 +2,7 @@
 require_once("./header/header.php");
 require_once("./nav/nav.php");
 
-require_once("./icons/shapes.php");
+require_once("./apps/icons/shapes.php");
 ?>
 
 <?php

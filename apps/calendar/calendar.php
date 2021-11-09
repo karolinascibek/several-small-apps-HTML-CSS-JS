@@ -21,12 +21,12 @@
 
 
 
-<script src="./calendar/js/general.js" defer></script>
-<script src="./calendar/js/list_events.js" defer></script>
-<script src="./calendar/js/calendar.js" defer></script>
-<script src="./calendar/js/api.js" defer></script>
-<script src="./calendar/js/add_event.js" defer></script>
-<script src="./calendar/js/event_tools.js" defer></script>
-<script src="./calendar/js/edit_event.js" defer></script>
-<script src="./calendar/js/main.js" defer></script>
+<script src="./apps/calendar/js/general.js" defer></script>
+<script src="./apps/calendar/js/list_events.js" defer></script>
+<script src="./apps/calendar/js/calendar.js" defer></script>
+<script src="./apps/calendar/js/api.js" defer></script>
+<script src="./apps/calendar/js/add_event.js" defer></script>
+<script src="./apps/calendar/js/event_tools.js" defer></script>
+<script src="./apps/calendar/js/edit_event.js" defer></script>
+<script src="./apps/calendar/js/main.js" defer></script>
 

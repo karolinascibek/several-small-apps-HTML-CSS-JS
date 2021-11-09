@@ -1,1 +1,1 @@
-baseURL="http://127.0.0.1/my-app/NaukaPHP/praktyki/";
+baseURL="http://127.0.0.1/my-app/NaukaPHP/praktyki/apps/";

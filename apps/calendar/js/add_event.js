@@ -42,7 +42,7 @@ function addNewEvent(){
     // dodanie nowego wydarzenia
     // aktualizowanie listy wydarzeń 
     // console.log(newEvent)
-    ajaxPostAddNewEvent(baseURL+"/calendar/php/add_event.php", newEvent);
+    ajaxPostAddNewEvent(baseURL+"calendar/php/add_event.php", newEvent);
 }
 
 function openAddEventForm(){

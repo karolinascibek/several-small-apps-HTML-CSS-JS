@@ -1,5 +1,5 @@
 <?php 
-require_once("../../global/database/db.php");
+require_once("../../../global/database/db.php");
 
 class Event  extends db{
     private $table = "calendar";

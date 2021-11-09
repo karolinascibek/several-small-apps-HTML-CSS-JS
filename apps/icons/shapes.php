@@ -11,7 +11,7 @@
         <div class="col">
             <div class="shape">
                 <?php
-                require_once "./icons/packman.php";
+                require_once "./apps/icons/packman.php";
                 ?>
             </div>
         </div>
@@ -20,7 +20,7 @@
         <div class="col">
             <div class="shape">
                 <?php
-                require "./icons/heart.php";
+                require "./apps/icons/heart.php";
                 ?>
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="col">
             <div class="shape">
                 <?php
-                require_once "./icons/cup.php";
+                require_once "./apps/icons/cup.php";
                 ?>
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="col">
             <div class="shape">
                 <?php
-                require_once "./icons/cat.php";
+                require_once "./apps/icons/cat.php";
                 ?>
             </div>
         </div>

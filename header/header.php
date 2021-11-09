@@ -18,14 +18,14 @@
 
     <!-- icons-style -->
 
-    <link rel="stylesheet" href="icons/css/shapes_style.css" type="text/css">
+    <link rel="stylesheet" href="apps/icons/css/shapes_style.css" type="text/css">
 
     <link rel="stylesheet" href="forms/css/forms_style.css" type="text/css">
 
     <!-- calendar-style -->
 
-    <link rel="stylesheet" href="calendar/css/cal_style.css" type="text/css">
-    <link rel="stylesheet" href="calendar/css/form_style.css" type="text/css">
+    <link rel="stylesheet" href="apps/calendar/css/cal_style.css" type="text/css">
+    <link rel="stylesheet" href="apps/calendar/css/form_style.css" type="text/css">
 
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
