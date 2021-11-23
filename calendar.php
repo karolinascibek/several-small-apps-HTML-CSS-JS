@@ -2,8 +2,13 @@
 require_once("./header/header.php");
 require_once("./nav/nav.php");
 
-require_once("./apps/calendar/index.php");
 ?>
+
+<div class="container-main">
+    <?php
+        require_once("./apps/calendar/index.php");
+    ?>
+</div>
 
 
 <?php

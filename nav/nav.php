@@ -33,6 +33,6 @@ function btnCloseMenu(){
 
 <style>
     #sectionAfterNav{
-        margin-bottom: 100px;;
+        margin-bottom: 0;;
     }
 </style>

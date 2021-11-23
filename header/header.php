@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="apps/calendar/css/cal_style.css" type="text/css">
     <link rel="stylesheet" href="apps/calendar/css/form_style.css" type="text/css">
 
+    <!-- meemory game -->
+    <link rel="stylesheet" href="apps/memory_game/css/game.css" type="text/css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 

@@ -6,7 +6,6 @@ class Board {
     colors=[]
     objectHTML=null
 
-
     constructor(){
         this.colorsToChoice = [
             "#FFD700","#1E90FF","#ADFF2F","#000000","#FF69B4", "#FFA07A","#7CFC00","#9400D3","#8f8585", 
@@ -82,8 +81,8 @@ class Board {
                 console.log("takie same")
             }
             else{
-                ob1.style.background = 'yellow';
-                ob2.style.background = 'yellow';
+                ob1.style.background = "#072F6B";
+                ob2.style.background = '#072F6B';
                 console.log("RÓŻNE!!")
             }
             ACTIVE_CARDS.pop()
@@ -98,7 +97,6 @@ class Board {
         if(ACTIVE_CARDS.length === 0){
             ACTIVE_CARDS.push(ob);
         }
-        console.log(ACTIVE_CARDS)
         console.log("ckliknetą")
 
       }

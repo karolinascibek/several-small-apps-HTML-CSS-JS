@@ -9,19 +9,29 @@ class Nav {
 
     createSizeBoxs(){
         for(const el of this.sizesBorad){
-            const box = document.createElement("li")
-            box.onclick = this.clickOnBox;
-            box.innerHTML = el;
-            this.objectHTML.appendChild(box)
+            this.createBox(el, this.clickOnBox)
         }
+        this.createBox("Reset", this.resetButton)
     }
+    createBox(el, func){
+        const box = document.createElement("li")
+        box.onclick = func;
+        box.innerHTML = el;
+        this.objectHTML.appendChild(box)
+        return box;
+    }
+    resetButton(){
+        const newBoard = new Board();
+        newBoard.size = SIZE_BOARD
+        newBoard.create()
+    }
+   
     clickOnBox(event){
-        console.log(event.target)
         const ob = event.target;
-
         const newBoard = new Board();
         newBoard.size = ob.innerHTML
         newBoard.create()
+        SIZE_BOARD = newBoard.size;
     }
 
     

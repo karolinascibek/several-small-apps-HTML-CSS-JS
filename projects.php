@@ -3,6 +3,7 @@ require_once("./header/header.php");
 require_once("./nav/nav.php");
 ?>
 
+<div class="container-main">
 <div id="projects">
     <ul id="projects-list">
         <li>
@@ -23,6 +24,7 @@ require_once("./nav/nav.php");
         </a>
         </li>
     </ul>
+</div>
 </div>
 
 <?php 

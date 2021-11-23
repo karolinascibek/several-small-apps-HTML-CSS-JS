@@ -8,14 +8,12 @@
 
 <style>
     #footer{
-        height: 100px;
         text-align: center;
         /* background: rgb(30,30,30); */
-        color:lightskyblue
+        color:lightskyblue;
+        background: rgba(255,255,255,0.2);
+        padding: 1rem;
     }
     footer > div {
-
-        margin-top: 50px;
-        padding: 1rem;
     }
 </style>

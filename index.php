@@ -12,7 +12,7 @@ require_once("./nav/nav.php");
 <div id="start-page">
     <img src="./img/forest.jpg" alt="">
 </div> -->
-
+<div class="container-main">
 <div id="projects">
     <ul id="projects-list">
         <li>
@@ -33,6 +33,7 @@ require_once("./nav/nav.php");
         </a>
         </li>
     </ul>
+</div>
 </div>
 
 <?php 
