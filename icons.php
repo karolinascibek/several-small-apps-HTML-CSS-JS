@@ -1,6 +1,6 @@
 <?php 
-require_once("./header/header.php");
-require_once("./nav/nav.php");
+require_once("./global/views/header/header.php");
+require_once("./global/views/nav/nav.php");
 
 ?>
 
@@ -11,5 +11,5 @@ require_once("./nav/nav.php");
 </div>
 
 <?php
-require_once("./footer/footer.php");
+require_once("./global/views/footer/footer.php");
 ?>

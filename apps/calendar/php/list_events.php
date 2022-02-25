@@ -1,6 +1,7 @@
 <?php 
 
-require_once "./db.php";
+require_once "config/config.php";
+require_once $path_db_file;
 
 
 // odebranie wartość z post metod

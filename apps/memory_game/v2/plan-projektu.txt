@@ -1,0 +1,9 @@
+1. wybranie koloru
+2. wybranie rozmiaru
+3. odliczanie czasu
+4. zliczanie punktów
+5. po dwuch kliknieciach zakrywanie kart jesli rózne karty
+6. jesli takie same zostaw
+
+1. ustawienie losowo kolorów 
+2. wylosowanie klorów 

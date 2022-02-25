@@ -1,9 +1,8 @@
 <?php 
 
 require_once("./global/php/const.php");
-
-require_once("./header/header.php");
-require_once("./nav/nav.php");
+require_once("./global/views/header/header.php");
+require_once("./global/views/nav/nav.php");
 ?>
 
 
@@ -41,14 +40,9 @@ require_once("./nav/nav.php");
 ?>
 
 <?php 
-require_once("./footer/footer.php");
+require_once("./global/views/footer/footer.php");
 ?>
 
-<style>
-    /* #sectionAfterNav{
-        margin-bottom: 0px;;
-    } */
-</style>
 
 
 

@@ -1,0 +1,22 @@
+.container {
+    /* position: relative; */
+    width: 100%;
+}
+
+#calendar-container {
+    /* position: relative; */
+    width: 40%;
+}
+
+
+@media screen and (max-width: 650px) {
+    #calendar-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    #calendar-container {
+        width: 60%;
+    }
+}

@@ -1,14 +1,14 @@
 <?php 
-require_once("./header/header.php");
-require_once("./nav/nav.php");
+require_once("./global/views/header/header.php");
+require_once("./global/views/nav/nav.php");
 ?>
 
-<div class="container-main">
+<main class="container-main">
     <?php
         require_once("./apps/memory_game/game.php");
     ?>
-</div>
+</main>
 
 <?php
-require_once("./footer/footer.php");
+require_once("./global/views/footer/footer.php");
 ?>
