@@ -50,7 +50,7 @@ header {
 
 .btn {
     padding: 1rem;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     outline: none;
     border: none;
     font-size: 1rem;
@@ -104,6 +104,7 @@ header {
 
 #result-board-section > #right-side button {
     border-radius: 50%;  
+    margin-left: 10px;
 }
 
 #result-board-section > button:hover {
@@ -152,11 +153,14 @@ section#settings-section {
 section#settings-section > div {
     /* display: flex;
     flex-wrap: wrap; */
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 section#settings-section > #options-board {
     display: none;
+    padding: 20px 0;
+    
+
 }
 
 section#settings-section .option {
