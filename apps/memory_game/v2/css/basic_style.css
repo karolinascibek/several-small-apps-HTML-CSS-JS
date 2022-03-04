@@ -140,6 +140,15 @@ section#board-section {
     background-color: var(--default-card-color);
     color: var(--default-font-card-color);
     border-radius: 0px;
+    font-size: 70%;
+}
+
+
+#board > .board-row > .card.active-card {
+    background-color: white;
+    color: var(--default-font-card-color);
+    font-size: 100%;
+    /* border: 1px solid var(--default-card-color); */
 }
 
 /* settings section */

@@ -1,21 +1,7 @@
 import { createBoard } from "../board/board.js";
 import { removeAllChildNodes } from "../basic_function/basic-function.js";
+import { settings } from "./Settings.js"
 
-
-const settings = [
-    {
-        name: "level", isActive: false, choiceValue: "10x4",
-        options: ["4x4", "5x5", "7x6", "10x6"]
-    },
-    {
-        name: "color", isActive: false, choiceValue: "purple",
-        options: ["violet", "blue", "orange", "green"]
-    },
-    {
-        name: "speed", isActive: false, choiceValue: "normal",
-        options: ["normal", "blue", "orange", "green"]
-    },
-];
 
 let idxLastActiveButton = null;
 
@@ -95,8 +81,7 @@ function createSettings() {
 }
 
 
-
-export { createSettings, settings }
+export { createSettings }
 
 
 
