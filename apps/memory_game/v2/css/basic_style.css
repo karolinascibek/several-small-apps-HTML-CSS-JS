@@ -159,6 +159,10 @@ section#settings-section {
     flex-direction: column;
 }
 
+section#settings-section header {
+    margin: 10px 0;
+}
+
 section#settings-section > div {
     /* display: flex;
     flex-wrap: wrap; */
@@ -173,10 +177,17 @@ section#settings-section > #options-board {
 }
 
 section#settings-section .option {
-    padding: 10px;
-    background-color: var(--default-option-color);
+    padding: 10px 20px;
     margin: 5px;
     border-radius: 3px;
+    border: none;
+    font-size: 1.1rem;
+    background-color: var(--default-option-color);
+}
+
+section#settings-section .option:hover {
+    background-color: rgb(113, 112, 112);
+    color: white;
 }
 
 section#settings-section > div#options-board.visible-options-board {

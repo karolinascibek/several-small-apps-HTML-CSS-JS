@@ -9,7 +9,6 @@ function createOptionsBoardElement(listElements) {
     const optionsBoard = document.getElementById("options-board");
     removeAllChildNodes(optionsBoard);
 
-
     for (let el of listElements) {
 
         const btn = document.createElement("button");
@@ -73,7 +72,6 @@ function createSettings() {
     const btnLevel = document.getElementById("level");
     const btnColor = document.getElementById("color");
     const btnSpeed = document.getElementById("speed");
-
 
     btnColor.addEventListener("click", clickOnBtn);
     btnLevel.addEventListener("click", clickOnBtn);

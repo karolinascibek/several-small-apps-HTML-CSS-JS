@@ -2,20 +2,15 @@ import { settings } from "../settings-board/Settings.js";
 import { getRandomInt, convertStrSizeToNumbers } from "../basic_function/basic-function.js";
 
 // losowe usatwienie kolorów
-let pointer = 0;
 let valuesCard = [];
 
 
 function prepareValueCards(nr){
     let cards = [];
-    for (let i = 0; i < nr; i++) {
-        pointer++;
-        cards[i] = pointer;
-        if (pointer === nr/2 ) {
-            pointer = 0;
-        }
+    for (let i = 0; i < nr/2; i++) {
+        cards[i] = i+1;
     }
-    return cards;
+    return [...cards, ...cards];
 }
 
   // 2. rozmieszczenie ich losowo na planszy
