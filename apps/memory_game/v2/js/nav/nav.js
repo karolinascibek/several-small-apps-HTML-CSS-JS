@@ -1,3 +1,7 @@
+import { setPoints } from "./points.js";
+import { createBoard } from "../board/board.js";
+import { createBtnStart } from "../board/btn-start.js";
+
 const btnHistory = document.getElementById("history-btn");
 const btnReset = document.getElementById("reset-btn");
 
@@ -9,9 +13,11 @@ const clikOnBtnHistory = () => {
 
 const clikOnBtnReset = () => {
     console.log("reset");
-    // ustawienie punkty na zero 
-    // odswierzenie planszy na wczęniejszeych utawienaich
+    // createNav();
+    // createBoard();
+    createBtnStart();
 }
+
 
 
 function createNav() {
@@ -22,6 +28,8 @@ function createNav() {
 
     btnHistory.addEventListener("click", clikOnBtnHistory);
     btnReset.addEventListener("click", clikOnBtnReset);
+
+    setPoints(0);
 }
 
 export { createNav }

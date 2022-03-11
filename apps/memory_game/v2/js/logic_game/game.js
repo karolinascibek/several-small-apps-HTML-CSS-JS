@@ -1,4 +1,4 @@
-import { settings } from "../settings-board/Settings.js";
+import { getLevel } from "../settings-board/Settings.js";
 import { getRandomInt, convertStrSizeToNumbers } from "../basic_function/basic-function.js";
 
 // losowe usatwienie kolorów
@@ -16,7 +16,7 @@ function prepareValueCards(nr){
   // 2. rozmieszczenie ich losowo na planszy
 
 function shuffleCards () {
-    const {n, m} = convertStrSizeToNumbers(settings[0].choiceValue);
+    const {n, m} = convertStrSizeToNumbers(getLevel());
 
     let cards = prepareValueCards(n*m); 
     cards.map( (card, idx) => {
@@ -27,8 +27,12 @@ function shuffleCards () {
     return cards;
 }
 
-function setValueCard(){
+function setValueCards(){
     valuesCard = shuffleCards();
 }
 
-export { valuesCard, setValueCard }
+function getValueCard(idx){
+    return valuesCard[idx];
+}
+
+export { setValueCards, getValueCard }

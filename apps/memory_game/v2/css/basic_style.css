@@ -116,6 +116,7 @@ header {
 
 section#board-section {
     background-color: var(--default-board-color);
+    position: relative;
 }
 
 #board-section > #board{
@@ -137,18 +138,48 @@ section#board-section {
     justify-content: center;
     text-align: center;
     margin: 1px;
-    background-color: var(--default-card-color);
     color: var(--default-font-card-color);
     border-radius: 0px;
-    font-size: 70%;
+    font-size: 1.5em;
 }
 
 
 #board > .board-row > .card.active-card {
     background-color: white;
     color: var(--default-font-card-color);
-    font-size: 100%;
     /* border: 1px solid var(--default-card-color); */
+}
+
+#board-section > #start-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(65, 58, 58, 0.7);
+}
+
+#board-section > #start-game > button{
+    padding: 5% 10%;
+    border-radius: 20px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    border: 4px solid rgb(255, 255, 255);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.3em;
+}
+
+#board-section > #start-game > button:hover{
+    background-color: blue;
+}
+
+#board-section > #start-game.hide-btn-start{
+    display: none;
 }
 
 /* settings section */

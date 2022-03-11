@@ -1,11 +1,10 @@
 import { removeAllChildNodes, convertStrSizeToNumbers } from "../basic_function/basic-function.js";
 import { createCard } from "./card.js";
-import { valuesCard, setValueCard } from "../logic_game/game.js";
+import { setValueCards } from "../logic_game/game.js";
+import { getColor, getLevel } from "../settings-board/Settings.js"
+import { resetActiveCard, resetNumberOfMatchedCards } from "./ActiveCards.js";
 
 //pomysleć nad dodaniem innych ustawien - na razie jest tylko rozmiar plaanszy
-const getSetting = (btns, idx) => {
-    return btns[idx];
-}
 
 const setSize = (obj, size) => {
     obj.style.width = `${size}px`;
@@ -16,20 +15,20 @@ const setBackgroundColor = (obj, color) => {
     obj.style.background = color;
 }
 
-
-
 const createRowBoard = () => {
     const rowBoard = document.createElement("div");
     rowBoard.classList.add("board-row");
     return rowBoard;
 }
 
+function createBoard() {
+    setValueCards();
+    resetActiveCard();
+    resetNumberOfMatchedCards();
 
-function createBoard(settings) {
-    const { choiceValue: nxm } = settings[0];
-    const { choiceValue: color } = settings[1];
+    const nxm = getLevel();
+    const color = getColor().choiceValue;
 
-    setValueCard();
     const { n, m } = convertStrSizeToNumbers(nxm);
     const board = document.getElementById("board");
     removeAllChildNodes(board)
@@ -51,5 +50,7 @@ function createBoard(settings) {
     }
 
 }
+
+
 
 export { createBoard }

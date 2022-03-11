@@ -1,6 +1,6 @@
 import { createBoard } from "../board/board.js";
 import { removeAllChildNodes } from "../basic_function/basic-function.js";
-import { settings } from "./Settings.js"
+import { settings, setChoiceValue } from "./Settings.js"
 
 
 let idxLastActiveButton = null;
@@ -17,8 +17,8 @@ function createOptionsBoardElement(listElements) {
         optionsBoard.appendChild(btn);
 
         btn.addEventListener("click", function () {
-            settings[idxLastActiveButton].choiceValue = this.innerHTML;
-            createBoard(settings);
+            setChoiceValue(idxLastActiveButton, this.innerHTML);
+            createBoard();
         })
 
     }
@@ -28,6 +28,8 @@ function createOptionsBoardElement(listElements) {
 function setStanBtn(btnName) {
     //ustawienie aktywnego guzika -> zmianan koloru 
     let clickedButton = {}
+
+    
     settings.map((btn, idx) => {
         const btnOption = document.getElementById(btn.name);
         if (btn.name === btnName) {
