@@ -61,7 +61,7 @@ function clickOnCard() {
         }
         if (ifEndGame(getNumberOfMatchedcards())) {
             createBtnStart();
-            resetNumberOfMatchedCards();
+            // resetNumberOfMatchedCards();
             console.log("End-new game")
         }
         console.log(getNumberOfMatchedcards())
