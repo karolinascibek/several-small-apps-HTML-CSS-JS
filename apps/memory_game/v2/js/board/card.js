@@ -3,6 +3,7 @@ import { getColor } from "../settings-board/Settings.js";
 import { updatePoints } from "../nav/points.js";
 import { ifEndGame } from "../logic_game/end-game.js";
 import { createBtnStart } from "./btn-start.js";
+import { setLinearGradient, setBackgroundColor} from "../basic_function/basic-function.js";
 import {
     activeCard,
     addToNumbertOfMatchedCards,
@@ -11,10 +12,17 @@ import {
 } from "./ActiveCards.js"
 
 
+function setBackgroundCard(card, color){
+    setLinearGradient(card, color, 'transparent');
+}
+
+
 function createCard(nr) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.id = `card-${nr}`;
+    // setBackgroundCard(card, getColor().choiceValue);
+    setBackgroundColor(card, getColor().choiceValue);
     card.addEventListener("click", clickOnCard)
     return card;
 }
@@ -30,18 +38,21 @@ function equalValueOfActiveCards() {
 function differentValueOfActiveCards() {
     for (let i = 0; i < 2; i++) {
         activeCard[0].classList.remove("active-card");
-        activeCard[0].innerText = "";
         activeCard[0].style.background = getColor().choiceValue;
+        // setBackgroundCard(activeCard[0], getColor().choiceValue)
+        activeCard[0].innerText = "";
         activeCard.shift();
     }
     addToNumbertOfMatchedCards(-2);
 }
 
 function setActiveCard(card) {
-    card.classList.add("active-card");
     let idx = card.id.split("-")[1];
-    card.innerText = getValueCard(idx);
+    card.classList.add("active-card");
+    card.style.color = getColor().choiceValue;
     card.style.background = getColor().colorOfMatchingCards;
+    card.style.fontSize = `${card.clientWidth/2}px`;
+    card.innerText = getValueCard(idx);
     activeCard.push(card);
 }
 

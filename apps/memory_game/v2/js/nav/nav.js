@@ -13,8 +13,6 @@ const clikOnBtnHistory = () => {
 
 const clikOnBtnReset = () => {
     console.log("reset");
-    // createNav();
-    // createBoard();
     createBtnStart();
 }
 

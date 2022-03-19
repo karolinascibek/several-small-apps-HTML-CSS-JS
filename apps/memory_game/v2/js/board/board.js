@@ -10,10 +10,6 @@ const setSize = (obj, size) => {
     obj.style.height = `${size}px`;
 }
 
-const setBackgroundColor = (obj, color) => {
-    obj.style.background = color;
-}
-
 const createRowBoard = () => {
     const rowBoard = document.createElement("div");
     rowBoard.classList.add("board-row");
@@ -43,7 +39,7 @@ function createCards(){
         for (let col = 0; col < n; col++) {
             const card = createCard(nr);
             setSize(card, width);
-            setBackgroundColor(card, color);
+            // setBackgroundColor(card, color);
             rowBoard.appendChild(card);
             nr ++;
         }

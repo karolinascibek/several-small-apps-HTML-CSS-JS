@@ -131,23 +131,29 @@ section#board-section {
 }
 
 #board > .board-row > .card {
-    /* width: 100px;
-    height: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin: 1px;
+    margin: 2px;
     color: var(--default-font-card-color);
     border-radius: 0px;
     font-size: 1.5em;
+    transform: rotateY(180deg);  
+
 }
 
 
 #board > .board-row > .card.active-card {
     background-color: white;
     color: var(--default-font-card-color);
-    /* border: 1px solid var(--default-card-color); */
+    transform: rotateY(360deg);
+    transition: background-color 0.6s ease-in , transform 0.6s ;
+}
+
+
+#board > .board-row > .card.clicked-card {
+    transform: rotateY(0deg);
 }
 
 #board-section > #start-game{

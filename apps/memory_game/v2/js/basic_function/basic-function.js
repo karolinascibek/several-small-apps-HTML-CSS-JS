@@ -17,4 +17,18 @@ const convertStrSizeToNumbers = (nxm) => {
     return { n: n, m: m };
 }
 
-export { removeAllChildNodes, getRandomInt, convertStrSizeToNumbers }
+const setBackgroundColor = (obj, color) => {
+    obj.style.background = color;
+}
+
+const setLinearGradient = (obj, color1, color2) => {
+    obj.style.background = `linear-gradient(225deg, ${color1}, ${color2})`;
+}
+
+export {
+    removeAllChildNodes,
+    getRandomInt,
+    convertStrSizeToNumbers,
+    setBackgroundColor,
+    setLinearGradient
+}
