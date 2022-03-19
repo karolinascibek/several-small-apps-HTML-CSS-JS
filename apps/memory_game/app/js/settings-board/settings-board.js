@@ -4,9 +4,9 @@ import { settings, setChoiceValue } from "./Settings.js"
 
 
 let idxLastActiveButton = null;
+const optionsBoard = document.getElementById("options-board");
 
 function createOptionsBoardElement(listElements) {
-    const optionsBoard = document.getElementById("options-board");
     removeAllChildNodes(optionsBoard);
 
     for (let el of listElements) {
@@ -29,7 +29,7 @@ function setStanBtn(btnName) {
     //ustawienie aktywnego guzika -> zmianan koloru 
     let clickedButton = {}
 
-    
+
     settings.map((btn, idx) => {
         const btnOption = document.getElementById(btn.name);
         if (btn.name === btnName) {
@@ -50,7 +50,6 @@ function setStanBtn(btnName) {
 
 function showHideOptionsSetings(btn) {
     const { isActive, idx } = setStanBtn(btn.id)
-    const optionsBoard = document.getElementById("options-board");
 
     if (!isActive) {
         optionsBoard.classList.remove("visible-options-board");
@@ -62,6 +61,13 @@ function showHideOptionsSetings(btn) {
         idxLastActiveButton = idx;
         createOptionsBoardElement(settings[idx].options);
     }
+}
+
+function hideSettings() {
+    optionsBoard.style.display = 'none';
+}
+function showSettings() {
+    optionsBoard.style.display = 'flex';
 }
 
 
@@ -81,7 +87,11 @@ function createSettings() {
 }
 
 
-export { createSettings }
+export {
+    createSettings,
+    hideSettings,
+    showSettings
+}
 
 
 

@@ -1,7 +1,7 @@
 
 const settings = [
     {
-        name: "level", isActive: false, choiceValue: "10x4",
+        name: "level", isActive: false, choiceValue: "4x4",
         options: ["4x4", "6x5", "7x6", "10x6"]
     },
     {

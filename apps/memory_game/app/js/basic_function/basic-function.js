@@ -18,11 +18,15 @@ const convertStrSizeToNumbers = (nxm) => {
 }
 
 const setBackgroundColor = (obj, color) => {
-    obj.style.background = color;
+    obj.style.backgroundColor = color;
 }
 
 const setLinearGradient = (obj, color1, color2) => {
-    obj.style.background = `linear-gradient(225deg, ${color1}, ${color2})`;
+    let degree = 'to bottom right'
+    const first = ['-webkit-', '-moz-', '-o-', ''];
+    for(let i = 0; i < first.length; i++){
+        obj.style.backgroundImage = `${first[i]}linear-gradient(${degree}, ${color1} , ${color2})`;
+    }
 }
 
 export {

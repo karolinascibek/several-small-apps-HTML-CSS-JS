@@ -1,10 +1,10 @@
 <?php
 $nav = [
-    "start" => "./index.php",
-    "o mnie" => "./about.php",
+    // "start" => "./index.php",
+    // "o mnie" => "./about.php",
     // "ikony" => "./shapes.php",
     // "formularze" => "./forms.php",
-    "projekty" => "./projects.php",
+    "projekty" => "./index.php",
     // "tab 5" => "./index.php",
 ];
 

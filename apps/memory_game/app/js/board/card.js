@@ -21,9 +21,9 @@ function createCard(nr) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.id = `card-${nr}`;
-    // setBackgroundCard(card, getColor().choiceValue);
     setBackgroundColor(card, getColor().choiceValue);
-    card.addEventListener("click", clickOnCard)
+    setBackgroundCard(card, getColor().choiceValue);
+    card.addEventListener("click", clickOnCard);
     return card;
 }
 
@@ -38,8 +38,9 @@ function equalValueOfActiveCards() {
 function differentValueOfActiveCards() {
     for (let i = 0; i < 2; i++) {
         activeCard[0].classList.remove("active-card");
-        activeCard[0].style.background = getColor().choiceValue;
-        // setBackgroundCard(activeCard[0], getColor().choiceValue)
+        // activeCard[0].style.background = getColor().choiceValue;
+        setBackgroundCard(activeCard[0], getColor().choiceValue)
+        setBackgroundColor(activeCard[0], getColor().choiceValue)
         activeCard[0].innerText = "";
         activeCard.shift();
     }
