@@ -82,6 +82,7 @@ header {
     flex-wrap: wrap;
     align-items: initial;
     justify-content: space-between;
+    position: relative;
 }
 
 #result-board-section > div {
@@ -111,6 +112,51 @@ header {
     
 
 }
+
+/* history section */
+
+section#history-section {
+    width: calc(100% - 20px);
+    height: 200px;
+    display: none;
+    z-index: 1;
+    overflow-y: scroll;
+    position: absolute;
+    top: 102%;
+    left: 0;
+    padding: 10px;
+    background-color: white;
+    justify-content: space-between;
+}
+
+section#history-section > #history-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section#history-section #best-result{
+    display: flex;
+    flex-direction: column;
+}
+
+section#history-section::-webkit-scrollbar {
+    width: 7px;
+}
+
+section#history-section::-webkit-scrollbar-thumb {
+    background-color: darkgray;
+    border-radius: 1px;
+
+}
+
+section#history-section::-webkit-scrollbar-track{
+    background-color: lightgray;
+}
+section#history-section > #history-container > div > table > tr {
+    width: 30%;
+}
+
 
 /* board section */
 

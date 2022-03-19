@@ -26,6 +26,34 @@
 
         </section>
 
+        <section id="history-section">
+            <div id="history-container">
+                <table>
+                    <tr>
+                        <th>Czas</th>
+                        <th>Wynik</th>
+                    </tr>
+                    <tr>
+                        <td>00:00:00</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>00:00:00</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>00:00:00</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>00:00:00</td>
+                        <td>12</td>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+
         <section id="board-section">
             <div id="board">
                 <div class="board-row">
