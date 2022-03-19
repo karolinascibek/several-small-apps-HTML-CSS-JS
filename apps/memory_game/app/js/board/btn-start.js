@@ -1,6 +1,7 @@
 import { createBoard } from "./board.js";
 import { createNav } from "../nav/nav.js";
 import { hideSettings } from "../settings-board/settings-board.js";
+import { clockStart, clockStop } from "../nav/clock.js";
 
 const startBtn = document.getElementById("start-game");
 
@@ -11,6 +12,8 @@ function clickedBtnStartGame(){
     createNav();
     createBoard();
     hideSettings();
+
+    clockStart();
 }
 
 function createBtnStart(){

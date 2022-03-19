@@ -1,6 +1,7 @@
 import { setPoints } from "./points.js";
 import { createBtnStart } from "../board/btn-start.js";
 import { showSettings } from "../settings-board/settings-board.js";
+import { showHistory } from "./history.js";
 
 const btnHistory = document.getElementById("history-btn");
 const btnReset = document.getElementById("reset-btn");
@@ -8,6 +9,7 @@ const btnReset = document.getElementById("reset-btn");
 
 const clikOnBtnHistory = () => {
     console.log("history");
+    showHistory();
     // chistoria z danej gry
 }
 
