@@ -5,7 +5,7 @@ import { ifEndGame } from "../logic_game/end-game.js";
 import { createBtnStart } from "./btn-start.js";
 import { setLinearGradient, setBackgroundColor} from "../basic_function/basic-function.js";
 import { clockStop } from "../nav/clock.js";
-import { saveScoreInHistory } from "../nav/history.js";
+import { updateHistory } from "../nav/history.js";
 import {
     activeCard,
     addToNumbertOfMatchedCards,
@@ -76,7 +76,7 @@ function clickOnCard() {
         if (ifEndGame(getNumberOfMatchedcards())) {
             createBtnStart();
             clockStop();
-            saveScoreInHistory();
+            updateHistory();
             console.log("End-new game")
         }
         console.log(getNumberOfMatchedcards())
