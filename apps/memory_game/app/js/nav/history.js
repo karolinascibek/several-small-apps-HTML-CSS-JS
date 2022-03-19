@@ -9,9 +9,6 @@ const tableTbody = document.querySelector('#table-with-scors > table > tbody');
 let hitoryStatus = false;
 
 const history = [
-    // {time: '12:00:12', score:12},
-    // {time: '12:00:12', score:12},
-    // {time: '12:00:12', score:12},
 ];
 
 
@@ -31,6 +28,7 @@ function createRowTable(time, score, header=false){
 
 function createHistoryTabel(){
     console.log("tableTbody")
+    console.log(tableTbody)
     removeAllChildNodes(tableTbody);
     tableTbody.appendChild(createRowTable('Czas', 'Wynik', true));
     
