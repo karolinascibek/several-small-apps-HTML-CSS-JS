@@ -28,7 +28,6 @@ function createRowTable(time, score, header=false){
 
 function createHistoryTabel(){
     console.log("tableTbody")
-    console.log(tableTbody)
     removeAllChildNodes(tableTbody);
     tableTbody.appendChild(createRowTable('Czas', 'Wynik', true));
     
@@ -62,7 +61,6 @@ function updateTheBestTime(){
     const theBestScore = document.getElementById('best-result');
     let score = `${history[history.length -1].time} pkt: ${history[history.length -1].score}`;
     theBestScore.childNodes[3].innerText = score;
-    console.log(theBestScore.childNodes[3])
 }
 
 function updateHistory(){

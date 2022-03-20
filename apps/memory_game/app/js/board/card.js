@@ -79,7 +79,6 @@ function clickOnCard() {
             updateHistory();
             console.log("End-new game")
         }
-        console.log(getNumberOfMatchedcards())
     }
 }
 
