@@ -51,6 +51,7 @@ header {
 .btn {
     padding: 1rem;
     /* margin-left: 10px; */
+    margin-right: 5px;
     outline: none;
     border: none;
     font-size: 1rem;
@@ -87,6 +88,12 @@ header {
 
 #result-board-section > div {
     display: flex;
+    margin-top: 5px;
+    flex-wrap: wrap;
+}
+
+#result-board-section > div > div {
+    margin-top: 5px;
 }
 
 #result-board-section > #left-side > div {
@@ -105,7 +112,7 @@ header {
 
 #result-board-section > #right-side button {
     border-radius: 50%;  
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 #result-board-section > button:hover {
@@ -153,9 +160,20 @@ section#history-section::-webkit-scrollbar-thumb {
 section#history-section::-webkit-scrollbar-track{
     background-color: lightgray;
 }
-section#history-section > #history-container > div > table > tr {
+section#history-section > #history-container > div > table {
     width: 30%;
 }
+section#history-section > #history-container > div > table > tbody > tr {
+    background-color: rgb(242, 244, 244);
+    text-align: right;
+}
+
+section#history-section > #history-container > div > table > tbody > tr > td,
+section#history-section > #history-container > div > table > tbody > tr > th {
+    padding: 10px;
+}
+
+
 
 
 /* board section */
@@ -248,17 +266,17 @@ section#settings-section header {
     margin: 10px 0;
 }
 
-section#settings-section > div {
-    /* display: flex;
-    flex-wrap: wrap; */
-    /* padding: 10px; */
+section#settings-section > div{
+    flex-wrap: wrap;
+}
+
+section#settings-section > #btns-optons > button {
+    margin-top: 5px;
 }
 
 section#settings-section > #options-board {
     display: none;
     padding: 20px 0;
-    
-
 }
 
 section#settings-section .option {

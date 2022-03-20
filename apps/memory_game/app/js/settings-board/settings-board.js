@@ -5,6 +5,9 @@ import { settings, setChoiceValue } from "./Settings.js"
 
 let idxLastActiveButton = null;
 const optionsBoard = document.getElementById("options-board");
+const btnOptions = document.getElementById("btns-optons");
+
+
 
 function createOptionsBoardElement(listElements) {
     removeAllChildNodes(optionsBoard);
@@ -53,11 +56,13 @@ function showHideOptionsSetings(btn) {
 
     if (!isActive) {
         optionsBoard.classList.remove("visible-options-board");
+        optionsBoard.style.display = 'none';
         btn.classList.remove("btn-active");
     }
     else {
         optionsBoard.classList.add("visible-options-board");
         btn.classList.add("btn-active");
+        optionsBoard.style.display = 'flex';
         idxLastActiveButton = idx;
         createOptionsBoardElement(settings[idx].options);
     }
@@ -65,9 +70,10 @@ function showHideOptionsSetings(btn) {
 
 function hideSettings() {
     optionsBoard.style.display = 'none';
+    btnOptions.style.display = 'none';
 }
 function showSettings() {
-    optionsBoard.style.display = 'flex';
+    btnOptions.style.display = 'flex';
 }
 
 
@@ -90,7 +96,8 @@ function createSettings() {
 export {
     createSettings,
     hideSettings,
-    showSettings
+    showSettings,
+    showHideOptionsSetings
 }
 
 

@@ -1,4 +1,6 @@
 import { removeAllChildNodes } from "../basic_function/basic-function.js";
+import { getLevel } from "../settings-board/Settings.js";
+
 
 const historyBtn = document.getElementById('history-btn');
 const historySection = document.getElementById('history-section');
@@ -12,15 +14,16 @@ const history = [
 ];
 
 
-function createRowTable(time, score, header=false){
+function createRowTable( newScore, header=false){
     const row = document.createElement('tr');
     let el = header ? 'th' : 'td';
-    const timeEl = document.createElement(el);
-    const scoreEl = document.createElement(el);
-    timeEl.innerText = time;
-    scoreEl.innerText = score;
-    row.appendChild(timeEl);
-    row.appendChild(scoreEl);
+
+    for(let score in newScore){
+        const col = document.createElement(el);
+        col.innerText = newScore[score];
+        row.appendChild(col);
+        console.log(score)
+    }
     return row;
 }
 
@@ -29,10 +32,11 @@ function createRowTable(time, score, header=false){
 function createHistoryTabel(){
     console.log("tableTbody")
     removeAllChildNodes(tableTbody);
-    tableTbody.appendChild(createRowTable('Czas', 'Wynik', true));
+    const header = {time:'Czas', score:'Wynik', level:'Poziom'};
+    tableTbody.appendChild(createRowTable(header, true));
     
     history.forEach( el => {
-        tableTbody.appendChild(createRowTable(el.time, el.score));
+        tableTbody.appendChild(createRowTable(el));
     })
 }
 
@@ -52,7 +56,8 @@ function showHistory() {
 function saveScoreInHistory(){
     const time = document.getElementById('time').innerText;
     const score = document.getElementById('points').innerText;
-    const newScore = { time:time, score:score};
+    const level = getLevel();
+    const newScore = { time:time, score:score, level:level};
     history.push(newScore);
     console.log("Saved socre to history")
 }
