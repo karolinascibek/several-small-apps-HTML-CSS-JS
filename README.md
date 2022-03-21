@@ -18,7 +18,7 @@
 <div>
 
 ## Technologie
-* JavaScript, PHP, HTML, CSS, MySQL
+* JavaScript, PHP, HTML, CSS, MySQL, AJAX
 
 ## Instalacja projektu
 ### Wymagania 
@@ -43,7 +43,17 @@
 
 
 # 2. Gra 
-W trakcie tworzenia 
+
+Gra Memory Game. Polega na znalezieniu par kart z tą samą liczbą. Jeśli karty są takie same
+to pozostają odkrytę. Natomiat w przeciwnym wypaku są ponownie zakrywane. Gra trwa do momentu znalezienia wszystkich par.
+Po zakończeniu wynik jest zapisywany do historii.
+W trakcie rozgrywki, grę można zresetować i zacząć od początku. 
+## Opis
+* Implementacja gry "Memory Game".
+* Mozliwość ustawienia poziomu trudności gry oraz koloru kart.
+* Restart gry -> górny prawy przycisk.
+* Historia gry -> górny lewy przycisk.
+* Zliczanie punktów i czasu gry -> lewa strony górnej belki.
 
 ## Interface aplikacji
 <div style='display: flex; align-items:start'> 
@@ -53,6 +63,10 @@ W trakcie tworzenia
 <img src='./global/img/interface/memory_game/play_game.png' width='200px'>
 <img src='./global/img/interface/memory_game/restart_game.png' width='200px'>
 <div>
+
+## Technologie
+* HTML, CSS, JS 
+
 
 
 
