@@ -27,7 +27,7 @@
 ![image 1](./global/img/interface/kolejnyMiesi%C4%85c.png)
 ![image 1](./global/img/interface/FormularzDodaniaWydarznia.png)
 ![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png) -->
-<div style='display: flex'> 
+<div style='display: flex; align-items:start'> 
 <img src='./global/img/interface/kalendarz.png' width='200px'>
 <img src='./global/img/interface/kolejnyMiesi%C4%85c.png' width='200px'>
 <img src='./global/img/interface/FormularzDodaniaWydarznia.png' width='200px'>
