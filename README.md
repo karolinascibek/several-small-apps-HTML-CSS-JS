@@ -27,10 +27,12 @@
 ![image 1](./global/img/interface/kolejnyMiesi%C4%85c.png)
 ![image 1](./global/img/interface/FormularzDodaniaWydarznia.png)
 ![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png) -->
-<img src='./global/img/interface/kalendarz.png' width='100px'>
+<div style='display: flex'> 
+<img src='./global/img/interface/kalendarz.png' width='200px'>
 <img src='./global/img/interface/kolejnyMiesi%C4%85c.png' width='200px'>
 <img src='./global/img/interface/FormularzDodaniaWydarznia.png' width='200px'>
 <img src='./global/img/interface//NarzedziaZlista_wydarzen.png' width='200px'>
+<div>
 
 
 # 2. Gra 
