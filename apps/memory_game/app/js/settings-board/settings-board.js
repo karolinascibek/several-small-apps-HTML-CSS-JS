@@ -85,11 +85,11 @@ function clickOnBtn() {
 function createSettings() {
     const btnLevel = document.getElementById("level");
     const btnColor = document.getElementById("color");
-    const btnSpeed = document.getElementById("speed");
+    // const btnSpeed = document.getElementById("speed");
 
     btnColor.addEventListener("click", clickOnBtn);
     btnLevel.addEventListener("click", clickOnBtn);
-    btnSpeed.addEventListener("click", clickOnBtn);
+    // btnSpeed.addEventListener("click", clickOnBtn);
 }
 
 

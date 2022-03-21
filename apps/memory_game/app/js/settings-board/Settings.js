@@ -9,10 +9,10 @@ const settings = [
         colorOfMatchingCards: "lightgray",
         options: ["violet", "blue", "orange", "green"]
     },
-    {
-        name: "speed", isActive: false, choiceValue: "normal",
-        options: ["normal", "blue", "orange", "green"]
-    },
+    // {
+    //     name: "speed", isActive: false, choiceValue: "normal",
+    //     options: ["normal", "blue", "orange", "green"]
+    // },
 
 ];
 

@@ -8,35 +8,51 @@
 * Mozliwość dodania listy zadań do danego dnia
 * Edytowanie listy zadań, usunięcie oraz odznaczenie zadania.
 
+
+## Interface aplikacji
+<div style='display: flex; align-items:start'> 
+<img src='./global/img/interface/calendar/kalendarz.png' width='200px'>
+<img src='./global/img/interface/calendar/kolejnyMiesi%C4%85c.png' width='200px'>
+<img src='./global/img/interface/calendar/FormularzDodaniaWydarznia.png' width='200px'>
+<img src='./global/img/interface/calendar/NarzedziaZlista_wydarzen.png' width='200px'>
+<div>
+
 ## Technologie
 * JavaScript, PHP, HTML, CSS, MySQL
 
-# Instalacja projektu
-## Wymagania 
+## Instalacja projektu
+### Wymagania 
 * PHP 7
 * Uwamp/Xampp
 
-## Uruchomienie projektu
+### Uruchomienie projektu
 1. Pobrać repozytorium
 2. Stworzyć baze danych na lokalhost. Baze nalezy zaimportować z pliku ```baza.sql```. Plik zanjduje się w projekcie
 3. W folderze ```/global/database/db.php``` ustawić baze danych.
 4. w pliku ```/global/js.ajax.js``` podac ścieżke bazowo projektu
 
-# Interface aplikacji
 <!-- ![image 1](./global/img/interface/kalendarz.png)
 ![image 1](./global/img/interface/kolejnyMiesi%C4%85c.png)
 ![image 1](./global/img/interface/FormularzDodaniaWydarznia.png)
-![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png) -->
-<div style='display: flex; align-items:start'> 
-<img src='./global/img/interface/kalendarz.png' width='200px'>
-<img src='./global/img/interface/kolejnyMiesi%C4%85c.png' width='200px'>
-<img src='./global/img/interface/FormularzDodaniaWydarznia.png' width='200px'>
-<img src='./global/img/interface//NarzedziaZlista_wydarzen.png' width='200px'>
-<div>
+![image 1](./global/img/interface/memory_game/v1_memory_game.png)
+![image 1](./global/img/interface/memory_game/setGame.png)
+![image 1](./global/img/interface/memory_game/Tablica_wynikow.png)
+![image 1](./global/img/interface/memory_game/play_game.png)
+![image 1](./global/img/interface/memory_game/restart_game.png) -->
+
 
 
 # 2. Gra 
 W trakcie tworzenia 
+
+## Interface aplikacji
+<div style='display: flex; align-items:start'> 
+<img src='./global/img/interface/memory_game/v1_memory_game.png' width='200px'>
+<img src='./global/img/interface/memory_game/setGame.png' width='200px'>
+<img src='./global/img/interface/memory_game/Tablica_wynikow.png' width='200px'>
+<img src='./global/img/interface/memory_game/play_game.png' width='200px'>
+<img src='./global/img/interface/memory_game/restart_game.png' width='200px'>
+<div>
 
 
 
