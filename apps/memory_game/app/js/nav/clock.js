@@ -23,13 +23,17 @@ function clockStart() {
     }, 1000);
 }
 
+function resetClock (){
+    clockStop();
+    setTime('00:00:00');
+}
+
 function clockStop() {
     clearInterval(idInterwal);
-
-    console.log("Zegar Stop");
 }
 
 export {
     clockStart,
-    clockStop
+    clockStop,
+    resetClock
 }

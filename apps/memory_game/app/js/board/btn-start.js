@@ -7,12 +7,10 @@ const startBtn = document.getElementById("start-game");
 
 function clickedBtnStartGame(){
     this.classList.add("hide-btn-start");
-    console.log("start czasu")
-    
+    console.log("start czasu") 
     createNav();
     createBoard();
     hideSettings();
-
     clockStart();
 }
 

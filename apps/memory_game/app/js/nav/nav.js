@@ -1,7 +1,8 @@
-import { setPoints } from "./points.js";
+import { resetPoints } from "./points.js";
 import { createBtnStart } from "../board/btn-start.js";
 import { showSettings } from "../settings-board/settings-board.js";
 import { showHistory } from "./history.js";
+import { resetClock } from "./clock.js";
 
 const btnHistory = document.getElementById("history-btn");
 const btnReset = document.getElementById("reset-btn");
@@ -15,6 +16,8 @@ const clikOnBtnHistory = () => {
 const clikOnBtnReset = () => {
     createBtnStart();
     showSettings();
+    resetPoints();
+    resetClock();
 }
 
 
@@ -25,8 +28,7 @@ function createNav() {
 
     btnHistory.addEventListener("click", clikOnBtnHistory);
     btnReset.addEventListener("click", clikOnBtnReset);
-
-    setPoints(0);
+    resetPoints();
 }
 
 export { createNav }

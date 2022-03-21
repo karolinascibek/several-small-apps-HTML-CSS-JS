@@ -13,7 +13,12 @@ function updatePoints(){
     setPoints(result);
 }
 
+function resetPoints(){
+    setPoints(0);
+}
+
 export {
     setPoints,
     updatePoints,
+    resetPoints
 }
