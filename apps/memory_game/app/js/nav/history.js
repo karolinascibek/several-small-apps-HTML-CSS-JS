@@ -22,7 +22,6 @@ function createRowTable( newScore, header=false){
         const col = document.createElement(el);
         col.innerText = newScore[score];
         row.appendChild(col);
-        console.log(score)
     }
     return row;
 }
@@ -30,7 +29,6 @@ function createRowTable( newScore, header=false){
 
 
 function createHistoryTabel(){
-    console.log("tableTbody")
     removeAllChildNodes(tableTbody);
     const header = {time:'Czas', score:'Wynik', level:'Poziom'};
     tableTbody.appendChild(createRowTable(header, true));
