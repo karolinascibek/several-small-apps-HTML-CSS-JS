@@ -22,6 +22,13 @@
 3. W folderze ```/global/database/db.php``` ustawić baze danych.
 4. w pliku ```/global/js.ajax.js``` podac ścieżke bazowo projektu
 
+# Interface aplikacji
+![image 1](./global/img/interface/kalendarz.png)
+![image 1](./global/img/interface/kolejnyMiesi%C4%85c.png)
+![image 1](./global/img/interface/FormularzDodaniaWydarznia.png)
+![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png)
+
+
 # 2. Gra 
 W trakcie tworzenia 
 
