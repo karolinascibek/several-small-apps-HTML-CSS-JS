@@ -27,6 +27,10 @@
 ![image 1](./global/img/interface/kolejnyMiesi%C4%85c.png)
 ![image 1](./global/img/interface/FormularzDodaniaWydarznia.png)
 ![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png)
+<img src='./global/img/interface/kalendarz.png' width='100px'>
+<img src='./global/img/interface/kolejnyMiesi%C4%85c.png' width='100px'>
+<img src='./global/img/interface/FormularzDodaniaWydarznia.png' width='100px'>
+<img src='./global/img/interface//NarzedziaZlista_wydarzen.png' width='100px'>
 
 
 # 2. Gra 
