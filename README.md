@@ -1,4 +1,4 @@
-# Klika małych projektów JavaScript-HTML-CSS-PHP
+<!-- # Klika małych projektów JavaScript-HTML-CSS-PHP -->
 
 # 1. Kalendarz
 ## Opis
@@ -23,14 +23,14 @@
 4. w pliku ```/global/js.ajax.js``` podac ścieżke bazowo projektu
 
 # Interface aplikacji
-![image 1](./global/img/interface/kalendarz.png)
+<!-- ![image 1](./global/img/interface/kalendarz.png)
 ![image 1](./global/img/interface/kolejnyMiesi%C4%85c.png)
 ![image 1](./global/img/interface/FormularzDodaniaWydarznia.png)
-![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png)
+![image 1](./global/img/interface//NarzedziaZlista_wydarzen.png) -->
 <img src='./global/img/interface/kalendarz.png' width='100px'>
-<img src='./global/img/interface/kolejnyMiesi%C4%85c.png' width='100px'>
-<img src='./global/img/interface/FormularzDodaniaWydarznia.png' width='100px'>
-<img src='./global/img/interface//NarzedziaZlista_wydarzen.png' width='100px'>
+<img src='./global/img/interface/kolejnyMiesi%C4%85c.png' width='200px'>
+<img src='./global/img/interface/FormularzDodaniaWydarznia.png' width='200px'>
+<img src='./global/img/interface//NarzedziaZlista_wydarzen.png' width='200px'>
 
 
 # 2. Gra 
