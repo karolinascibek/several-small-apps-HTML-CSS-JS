@@ -1,27 +1,28 @@
-
-.row{
+.row {
     width: 80%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-.col{
+
+.col {
     /** N E S W **/
     margin: 1% 1% 1% 1%;
-    height: 200px ;
-    width:200px ;
+    height: 200px;
+    width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-@media screen and (max-width: 425px){
-    .col{
+@media screen and (max-width: 425px) {
+    .col {
         width: 50%;
         height: 50vw;
     }
 }
-.shape{
+
+.shape {
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -35,35 +36,38 @@
 
 /* * pacman * */
 
-.packman{
+.packman {
     border-radius: 50%;
     background: yellow;
     background: radial-gradient(circle, rgb(243, 238, 163) 10%, yellow 50%, rgb(211, 211, 140) 100%);
     width: 50%;
-    height: 50%;  
+    height: 50%;
 
-  
+
 }
-.packman-mouth{
+
+.packman-mouth {
     width: 50%;
     height: 50%;
-    border-top-left-radius: 100% ;
+    border-top-left-radius: 100%;
     background: rgb(255, 255, 255);
     position: relative;
     right: 2%;
     bottom: 2%;
 
 }
-.packman-eye{
+
+.packman-eye {
     width: 15%;
     height: 15%;
     background: rgb(0, 0, 0);
     position: relative;
     left: 62%;
-    bottom:30%;
+    bottom: 30%;
     border-radius: 50%;
 }
-.food{
+
+.food {
     width: 25%;
     height: 25%;
     background: rgb(187, 255, 0);
@@ -75,7 +79,7 @@
 }
 
 /* heart */
-.heart{
+.heart {
     width: 100%;
     height: 100%;
     display: flex;
@@ -84,7 +88,8 @@
     align-items: center;
 
 }
-.ears{
+
+.ears {
     width: 100%;
     height: 50%;
     display: flex;
@@ -92,33 +97,38 @@
     justify-content: center;
     align-items: flex-end;
 }
-.circle{
+
+.circle {
     width: 25%;
     height: 50%;
-    background: rgb(223, 173, 11);
-    border-radius: 100%;
-    background: linear-gradient(90deg, rgb(232, 125, 86) 0%, rgb(242, 255, 0) 70%);
+    background: rgb(223, 11, 11);
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgb(197, 37, 37)) 0%, rgb(197, 37, 37));
 
 }
 
-.triangle{
+.triangle {
     width: 0;
     height: 0;
     position: relative;
-    bottom: 12%;
+    bottom: 16%;
+    z-index: 1;
 }
-.hide-bottom-ears{
+
+.hide-bottom-ears {
     width: 50%;
-    height: 5%;
-    background: rgb(243, 243, 243);
+    height: 10%;
+    background: rgb(255, 254, 254);
     position: relative;
     bottom: 12%;
-    
-} 
+    z-index: 2;
+    /* border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%; */
+}
 
 /* cup */
 
-.cup{
+.cup {
     width: 50%;
     height: 50%;
     display: flex;
@@ -127,44 +137,47 @@
     align-items: center;
 }
 
-#top-cup{
+#top-cup {
     width: 100%;
     height: 50%;
     display: flex;
     position: relative;
-    left:15%;
-    top:13%
-    
+    left: 15%;
+    top: 13%
 }
-#mug{
+
+#mug {
     width: 70%;
     height: 100%;
-    background:rgb(24, 219, 226);
+    background: rgb(24, 219, 226);
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
 }
-#ear{
+
+#ear {
     width: 20%;
     height: 50%;
-    background:rgb(18, 140, 181);
+    background: rgb(18, 140, 181);
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
     display: flex;
     align-items: center;
 
 }
-#ear > div{
+
+#ear>div {
     width: 70%;
     height: 50%;
-    background:rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
     border-top-right-radius: 50%;
     border-bottom-right-radius: 50%;
 
 }
-#plate{
+
+#plate {
     width: 100%;
     height: 25%;
-    background:rgb(21, 37, 48);
+    background: rgb(21, 37, 48);
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -172,17 +185,18 @@
 
 
 }
-#plate > div{
+
+#plate>div {
     width: 40%;
     height: 25%;
-    background:rgb(51, 97, 128);
+    background: rgb(51, 97, 128);
     border-radius: 100%;
 
-} 
+}
 
 /* cat */
 
-#cat{
+#cat {
     width: 100%;
     height: 50%;
     display: flex;
@@ -190,7 +204,8 @@
     justify-content: center;
     align-items: center;
 }
-.ears-cat{
+
+.ears-cat {
     width: 50%;
     height: 25%;
     display: flex;
@@ -199,11 +214,12 @@
 
 }
 
-.ear-cat{
+.ear-cat {
     width: 0%;
     height: 0%;
 }
-.head-cat{
+
+.head-cat {
     width: 40%;
     height: 70%;
     border: 1px solid black;
@@ -214,26 +230,28 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    bottom:15%;
+    bottom: 15%;
 }
-.paws{
+
+.paws {
     width: 50%;
     height: 15%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     position: relative;
-    bottom:25%;
+    bottom: 25%;
 }
-.paw{
+
+.paw {
     width: 25%;
     height: 100%;
-    background: rgb(136, 5, 114); 
+    background: rgb(136, 5, 114);
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
 
-.eyes{
+.eyes {
     width: 100%;
     height: 30%;
     display: flex;
@@ -241,31 +259,33 @@
     justify-content: space-around;
     align-items: flex-end;
 }
-.eye{
+
+.eye {
     width: 7%;
     height: 30%;
-    background: rgb(0, 5, 1); 
+    background: rgb(0, 5, 1);
     border-radius: 100%;
 }
-.nose{
+
+.nose {
     width: 0%;
     height: 0%;
     align-self: center;
 }
-.mouth{
+
+.mouth {
     width: 50%;
     height: 30%;
     align-self: center;
     display: flex;
     justify-content: center;
 }
-.part-mouth{
+
+.part-mouth {
     width: 50%;
     height: 50%;
     border: 1px solid palegoldenrod;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    border-top:0;
+    border-top: 0;
 }
-
-

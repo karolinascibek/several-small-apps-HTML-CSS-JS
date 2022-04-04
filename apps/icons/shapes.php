@@ -43,40 +43,8 @@
 
         <div class="col">
             <div class="shape">
-                <div class="circle">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="shape">
-                <div class="circle">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="shape">
-                <div class="circle">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="shape">
-                <div class="circle">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-            <div class="shape">
-                <div class="circle">
-
+                <div class="">
+                    new 
                 </div>
             </div>
         </div>
