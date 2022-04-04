@@ -77,7 +77,7 @@ Powstały min. takie ikony jak: packman, serce, kot, filiżanka
 
 ## 
 <div style='display: flex; align-items:start'> 
-<img src='./global/img/interface/icons/icons.png' width='200px'>
+<img src='./global/img/interface/icons/icons2.png' width='300px'>
 <div>
 
 
