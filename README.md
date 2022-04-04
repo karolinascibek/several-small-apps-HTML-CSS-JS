@@ -67,6 +67,19 @@ W trakcie rozgrywki, grę można zresetować i zacząć od początku.
 ## Technologie
 * HTML, CSS, JS 
 
+# 3. Ikony
+
+Projekt powstał w celu nauki CSS.
+
+## Opis
+
+Powstały min. takie ikony jak: packman, serce, kot, filiżanka 
+
+## 
+<div style='display: flex; align-items:start'> 
+<img src='./global/img/interface/icons/icons.png' width='200px'>
+<div>
+
 
 
 
